@@ -1,0 +1,79 @@
+.advantages {
+  padding-top: 60px;
+  padding-bottom: 150px;
+  &__wrap {
+    position: relative;
+    align-items: center;
+  }
+  &__title {
+    // max-width: 550px;
+    text-align: center;
+    font-size: 43px;
+    font-weight: 700;
+    line-height: 56px;
+    color: $txt-color;
+  }
+  &__devider {
+    width: 96px;
+    height: 15px;
+    border-radius: 8px;
+    background-color: $main-theme;
+    margin-top: 46px;
+    margin-bottom: 112px;
+  }
+  &__main-img {
+    transform: translateX(47px);
+  }
+  &__images-block {
+    position: absolute;
+    top: 275px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  &__images-item {
+    position: absolute;
+    // display: flex;
+    // flex-direction: column;
+    img {
+      // flex-shrink: ;
+    }
+    p {
+      font-size: 18px;
+      line-height: 26px;
+      letter-spacing: 0.27px;
+      color: $txt-color;
+      // max-width: 265px;
+    }
+    &_m1 {
+      top: 0px;
+      left: 190px;
+      p {
+        padding-left: 20px;
+      }
+    }
+    &_m2 {
+      top: -20px;
+      right: 130px;
+      p {
+        padding-left: 20px;
+      }
+    }
+    &_m3 {
+      top: 270px;
+      right: -15px;
+    }
+    &_m4 {
+      bottom: -170px;
+      right: 130px;
+    }
+    &_m5 {
+      bottom: -170px;
+      left: 260px;
+    }
+    &_m6 {
+      top: 225px;
+      left: 0;
+    }
+  }
+}

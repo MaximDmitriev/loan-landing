@@ -1,0 +1,43 @@
+.icon {
+  display: inline-block;
+  // &.example-png-icon {
+  //   background: url(img/icons/example.png);
+  //   width: 30px;
+  //   height: 30px;
+  // }
+  // &-example-svg-icon {
+  //   width: 30px;
+  //   height: 30px;
+  //   fill: red;
+  // }
+  &-hamburger {
+    width: 26px;
+    height: 32px;
+    fill: #7ec920;
+  }
+  &-mouse {
+    width: 17px;
+    height: 29px;
+    fill: #7ec920;
+  }
+  &.mouse {
+    background: url('img/icons/mouse.png');
+    width: 17px;
+    height: 29px;
+  }
+  &.main-logo {
+    background: url('img/icons/main-logo.png');
+    width: 56px;
+    height: 59px;
+  }
+  &.phone {
+    background: url('img/icons/phone.png');
+    width: 21px;
+    height: 21px;
+  }
+  &.placeholder {
+    background: url('img/icons/placeholder.png');
+    width: 15px;
+    height: 21px;
+  }
+}

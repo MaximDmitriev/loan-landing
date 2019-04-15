@@ -1,0 +1,37 @@
+.mainscreen.section
+  ._info
+    ._info-shadow
+    ._info-cash  кэшбэк <span>20%</span>
+    ._info-txt Возвращаем до 20% от суммы уплаченных процентов
+
+  img(src="img/car.png", alt="car")._car
+  img(src="img/ok-man.png", alt="ok")._man
+  img(src="img/white-clouds.png", alt="clouds")._clouds
+  ._wrap.wrap
+    header._header
+      ._header-company
+        +icon('main-logo')._header-logo
+        ._header-name Региональный кредитный союз
+      ._header-location
+        ._header-icon
+          +icon('placeholder')._header-placeholder
+        ._header-addres  г.Калининград, Советский пр-кт, д.59
+      ._header-contacts
+        ._header-icon
+          +icon('phone')._header-phone
+        ._header-content
+          a(href="tel:+79518914171") +7 (951) 891 41 71
+          p Получить консультацию
+        +svg('hamburger', 'header-menu-btn')
+    ._content
+      h2._content-title Деньги под залог
+      ._content-txt Вы получите ответ в течение 3 часов, а деньги в течение 12 часов
+      button._content-btn Получить займ
+      ._content-info-group
+        ._content-info-item.
+          до <span>1 млн</span> рублей<br> под залог авто
+        ._content-info-item.
+          до <span>10 млн</span> рублей<br> под залог недвижимости
+    ._scroll
+      +icon('mouse', 'mainscreen__mouse')
+      p Листайте вниз

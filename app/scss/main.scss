@@ -1,0 +1,59 @@
+@import "_fonts";
+@import "_mixins";
+@import "_variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $base-font;
+  font-size: $base-font-size;
+  min-width: 320px;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+button {
+  font-family: $base-font;
+  border: none;
+  &:hover{
+    cursor: pointer;
+  }
+  &:active, &:focus {
+    outline: none;
+  }
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1920px;
+  margin: auto;
+}
+
+.wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 1170px;
+}
+
+@import "icons";
+
+@import "../elements/mainscreen/mainscreen";
+@import "../elements/advantages/advantages";
