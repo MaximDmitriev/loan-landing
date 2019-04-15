@@ -113,6 +113,9 @@
       background-size: contain;
       background-position: center;
     }
+    &_nomargin {
+      margin: 0;
+    }
   }
   &__content-info-group {
     display: flex;
@@ -160,12 +163,14 @@
   }
   &__info-cash {
     text-align: left;
-    // background-image: linear-gradient(to top, rgba(133, 195, 35, 0.96) 0%, rgba(163, 224, 98, 0.96) 49%, rgba(163, 210, 82, 0.96) 100%);
-    // background-clip: text;
-    background-image: linear-gradient(to top rgba(133, 195, 35, 0.96) 0%, rgba(163, 224, 98, 0.96) 49%, rgba(163, 210, 82, 0.96) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 1px 1px 0 rgba(91, 158, 19, 0.85);
+    // background-image: linear-gradient(to top rgba(133, 195, 35, 0.96) 0%, rgba(163, 224, 98, 0.96) 49%, rgba(163, 210, 82, 0.96) 100%);
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    // text-shadow: 1px 1px 0 rgba(91, 158, 19, 0.85);
+    // flex-grow: 0;
+    // flex-shrink: 0;
+    // flex: none;
+    max-width: 129px;
     color: $main-theme;
     font-family: "Gotham Pro Black";
     font-size: 33px;
@@ -205,6 +210,7 @@
   &__car {
     position: absolute;
     right: 0;
+    // transform: translateX(544px);
     top: 442px;
   }
   &__scroll {

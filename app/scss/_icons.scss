@@ -20,6 +20,21 @@
     height: 29px;
     fill: #7ec920;
   }
+  &-call {
+    width: 20px;
+    height: 20px;
+    fill: #e8ebef;
+  }
+  &-man {
+    width: 16px;
+    height: 20px;
+    fill: #e8ebef;
+  }
+  &-checked {
+    width: 9px;
+    height: 7px;
+    fill: #ffffff;
+  }
   &.mouse {
     background: url('img/icons/mouse.png');
     width: 17px;

@@ -12,6 +12,7 @@ body {
   font-family: $base-font;
   font-size: $base-font-size;
   min-width: 320px;
+  // overflow-x: hidden;
 }
 
 img {
@@ -37,6 +38,10 @@ button {
   }
 }
 
+input {
+  border: none;
+}
+
 .section {
   display: flex;
   justify-content: center;
@@ -57,3 +62,5 @@ button {
 
 @import "../elements/mainscreen/mainscreen";
 @import "../elements/advantages/advantages";
+@import "../elements/calculator/calculator";
+@import "../elements/term/term";

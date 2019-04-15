@@ -1,0 +1,193 @@
+.calc {
+  background: url('./img/clouds-free.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  &__wrap {
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 90px;
+  }
+  &__title {
+    font-size: 43px;
+    font-weight: 700;
+    line-height: 56px;
+    color: $txt-color;
+  }
+  &__info {
+    margin-bottom: 30px;
+    margin-top: 25px;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.27px;
+    color: $txt-color;
+  }
+  &__container {
+    margin-top: 36px;
+    padding-top: 77px;
+    padding-right: 110px;
+    padding-bottom: 100px;
+    padding-left: 100px;
+    background-color: $dark-bg;
+  }
+  &__options {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+  &__options-item {
+    flex-basis: 49%;
+  }
+  &__options-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  &__options-text {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 0.3px;
+    color: $txt-color;
+  }
+  &__options-output {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 145px;
+    height: 65px;
+    margin-left: 12px;
+    margin-right: 19px;
+    border-radius: 33px;
+    background-color: #ffffff;
+    color: $txt-color;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0.38px;
+    &_small {
+      width: 112px;
+      height: 65px;
+    }
+  }
+  &__options-input {
+    width: 80%;
+  }
+  &__table, &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+  }
+  &__table-title, &__form-title {
+    margin-bottom: 28px;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0.38px;
+    color: $txt-color;
+  }
+  &__table-header {
+    display: flex;
+    justify-content: space-around;
+    width: 748px;
+    padding: 14px 0;
+    border-radius: 21px;
+    background-color: #ffffff;
+    line-height: 27px;
+    letter-spacing: 0.24px;
+    color: $txt-color;
+  }
+  &__table-index, &__table-value {
+    flex-basis: 27%;
+    text-align: center;
+    &:first-child {
+      flex-basis: 19%;
+    }
+  }
+  &__table-row {
+    display: flex;
+    justify-content: space-around;
+    width: 748px;
+    padding: 20px 0;
+    border-bottom: 1px dashed rgba(137, 137, 137, 0.33);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 0.27px;
+    color: $txt-color;
+    &:last-child {
+      border: none;
+    }
+  }
+  &__form {
+    margin-top: 40px;
+  }
+  &__form-wrap {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  &__form-input {
+    position: relative;
+    width: 260px;
+    padding-left: 70px;
+    height: 76px;
+    margin-right: 15px;
+    border-radius: 38px;
+    background-color: #ffffff;
+    line-height: 27px;
+    letter-spacing: 0.24px;
+    color: #686868;
+    // &_phone {
+    //   &::before {
+    //     position: absolute;
+    //     content: '';
+    //     width: 20px;
+    //     height: 20px;
+    //     color: red;
+    //     // background-image: url('./img/call.svg');
+    //     // background-size: contain;
+    //     border: 1px solid red;
+    //   }
+    // }
+  }
+  // &__call-icon {
+  //   position: relative;
+  // }
+  &__politics {
+    display: flex;
+    align-items: center;
+    margin-top: 56px;
+    color: #848484;
+  }
+  &__politics-checkbox {
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    box-shadow: inset 1px 2px 6px 1px rgba(80, 80, 80, 0.14);
+    border-radius: 2px;
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+  &__politics-txt {
+    line-height: 27px;
+    letter-spacing: 0.24px;
+    padding-left: 13px;
+    padding-right: 38px;
+  }
+  &__politics-link {
+    font-size: 14px;
+    line-height: 21.33px;
+    letter-spacing: 0.2px;
+    border-bottom: 1px solid #d7d7d7;
+    padding-top: 4px;
+    padding-bottom: 6px;
+    cursor: pointer;
+  }
+}

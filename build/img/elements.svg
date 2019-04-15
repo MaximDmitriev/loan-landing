@@ -1,1 +1,86 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="tbwaa" d="M916 1042.5a7.5 7.5 0 0 1 7.5-7.5h81a7.5 7.5 0 1 1 0 15h-81a7.5 7.5 0 0 1-7.5-7.5z"/><path id="1h74a" d="M1514 64a3 3 0 0 1 3-3h27a3 3 0 0 1 0 6h-27a3 3 0 0 1-3-3z"/><path id="1h74b" d="M1514 74a3 3 0 0 1 3-3h27a3 3 0 0 1 0 6h-27a3 3 0 0 1-3-3z"/><path id="1h74c" d="M1514 84a3 3 0 0 1 3-3h27a3 3 0 0 1 0 6h-27a3 3 0 0 1-3-3z"/><path id="fpuka" d="M1301 816.69a8 8 0 0 1 8-8h1a8 8 0 0 1 8 8v11.63a8 8 0 0 1-8 8h-1a8 8 0 0 1-8-8z"/><path id="fpukc" d="M1308 814.5a1.5 1.5 0 1 1 3 0v4a1.5 1.5 0 1 1-3 0z"/><clipPath id="fpukb"><use xlink:href="#fpuka"/></clipPath><linearGradient id="fpukd" x1="1309" x2="1310" y1="820" y2="813" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6ab717"/><stop offset="1" stop-color="#a3d252"/></linearGradient><path id="ohysa" d="M1301 816.69a8 8 0 0 1 8-8h1a8 8 0 0 1 8 8v11.63a8 8 0 0 1-8 8h-1a8 8 0 0 1-8-8z"/><path id="ohysc" d="M1308 814.5a1.5 1.5 0 1 1 3 0v4a1.5 1.5 0 1 1-3 0z"/><clipPath id="ohysb"><use xlink:href="#ohysa"/></clipPath><linearGradient id="ohysd" x1="1309" x2="1310" y1="820" y2="813" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6ab717"/><stop offset="1" stop-color="#a3d252"/></linearGradient></defs><symbol id="sapn" viewBox="0 0 96 15"><g><g transform="translate(-916 -1035)"><use xlink:href="#tbwaa"/></g></g></symbol><symbol id="hamburger" viewBox="0 0 33 26"><g><g transform="translate(-1514 -61)"><use xlink:href="#1h74a"/></g><g transform="translate(-1514 -61)"><use xlink:href="#1h74b"/></g><g transform="translate(-1514 -61)"><use xlink:href="#1h74c"/></g></g></symbol><symbol id="mouse" viewBox="0 0 17 29"><g><g transform="translate(-1301 -808)"><use fill-opacity="0" stroke-miterlimit="50" stroke-width="3.74" clip-path="url(&quot;#fpukb&quot;)" xlink:href="#fpuka"/></g><g transform="translate(-1301 -808)"><use fill="url(#fpukd)" xlink:href="#fpukc"/></g></g></symbol><symbol id="mouse2" viewBox="0 0 17 29"><g><g transform="translate(-1301 -808)"><use fill-opacity="0" stroke-miterlimit="50" stroke-width="3.74" clip-path="url(&quot;#ohysb&quot;)" xlink:href="#ohysa"/></g><g transform="translate(-1301 -808)"><use fill="url(#ohysd)" xlink:href="#ohysc"/></g></g></symbol></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="tbwaa" d="M916 1042.5a7.5 7.5 0 0 1 7.5-7.5h81a7.5 7.5 0 1 1 0 15h-81a7.5 7.5 0 0 1-7.5-7.5z"/><path id="1h74a" d="M1514 64a3 3 0 0 1 3-3h27a3 3 0 0 1 0 6h-27a3 3 0 0 1-3-3z"/><path id="1h74b" d="M1514 74a3 3 0 0 1 3-3h27a3 3 0 0 1 0 6h-27a3 3 0 0 1-3-3z"/><path id="1h74c" d="M1514 84a3 3 0 0 1 3-3h27a3 3 0 0 1 0 6h-27a3 3 0 0 1-3-3z"/><path id="fpuka" d="M1301 816.69a8 8 0 0 1 8-8h1a8 8 0 0 1 8 8v11.63a8 8 0 0 1-8 8h-1a8 8 0 0 1-8-8z"/><path id="fpukc" d="M1308 814.5a1.5 1.5 0 1 1 3 0v4a1.5 1.5 0 1 1-3 0z"/><clipPath id="fpukb"><use xlink:href="#fpuka"/></clipPath><linearGradient id="fpukd" x1="1309" x2="1310" y1="820" y2="813" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6ab717"/><stop offset="1" stop-color="#a3d252"/></linearGradient><path id="ohysa" d="M1301 816.69a8 8 0 0 1 8-8h1a8 8 0 0 1 8 8v11.63a8 8 0 0 1-8 8h-1a8 8 0 0 1-8-8z"/><path id="ohysc" d="M1308 814.5a1.5 1.5 0 1 1 3 0v4a1.5 1.5 0 1 1-3 0z"/><clipPath id="ohysb"><use xlink:href="#ohysa"/></clipPath><linearGradient id="ohysd" x1="1309" x2="1310" y1="820" y2="813" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6ab717"/><stop offset="1" stop-color="#a3d252"/></linearGradient><path id="oeiya" d="M989.173 1120.346a.623.623 0 0 1-.173-.404c0-.115.058-.288.173-.404l.808-.807c.23-.231.577-.231.807 0l.058.057 3.173 3.404a.279.279 0 0 0 .404 0l7.73-8.019h.059c.23-.23.576-.23.807 0l.808.808c.23.23.23.577 0 .807l-9.23 9.577a.524.524 0 0 1-.405.173.524.524 0 0 1-.404-.173l-4.5-4.846-.115-.173z"/></defs><symbol id="sapn" viewBox="0 0 96 15"><g><g transform="translate(-916 -1035)"><use xlink:href="#tbwaa"/></g></g></symbol><symbol id="call" viewBox="0 0 348.077 348.077">
+<g>
+	<g>
+		<g>
+			<path d="M340.273,275.083l-53.755-53.761c-10.707-10.664-28.438-10.34-39.518,0.744l-27.082,27.076
+				c-1.711-0.943-3.482-1.928-5.344-2.973c-17.102-9.476-40.509-22.464-65.14-47.113c-24.704-24.701-37.704-48.144-47.209-65.257
+				c-1.003-1.813-1.964-3.561-2.913-5.221l18.176-18.149l8.936-8.947c11.097-11.1,11.403-28.826,0.721-39.521L73.39,8.194
+				C62.708-2.486,44.969-2.162,33.872,8.938l-15.15,15.237l0.414,0.411c-5.08,6.482-9.325,13.958-12.484,22.02
+				C3.74,54.28,1.927,61.603,1.098,68.941C-6,127.785,20.89,181.564,93.866,254.541c100.875,100.868,182.167,93.248,185.674,92.876
+				c7.638-0.913,14.958-2.738,22.397-5.627c7.992-3.122,15.463-7.361,21.941-12.43l0.331,0.294l15.348-15.029
+				C350.631,303.527,350.95,285.795,340.273,275.083z"/>
+		</g>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</symbol><symbol id="man" viewBox="0 0 350 350">
+<g>
+	<path d="M175,171.173c38.914,0,70.463-38.318,70.463-85.586C245.463,38.318,235.105,0,175,0s-70.465,38.318-70.465,85.587
+		C104.535,132.855,136.084,171.173,175,171.173z"/>
+	<path d="M41.909,301.853C41.897,298.971,41.885,301.041,41.909,301.853L41.909,301.853z"/>
+	<path d="M308.085,304.104C308.123,303.315,308.098,298.63,308.085,304.104L308.085,304.104z"/>
+	<path d="M307.935,298.397c-1.305-82.342-12.059-105.805-94.352-120.657c0,0-11.584,14.761-38.584,14.761
+		s-38.586-14.761-38.586-14.761c-81.395,14.69-92.803,37.805-94.303,117.982c-0.123,6.547-0.18,6.891-0.202,6.131
+		c0.005,1.424,0.011,4.058,0.011,8.651c0,0,19.592,39.496,133.08,39.496c113.486,0,133.08-39.496,133.08-39.496
+		c0-2.951,0.002-5.003,0.005-6.399C308.062,304.575,308.018,303.664,307.935,298.397z"/>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</symbol><symbol id="hamburger" viewBox="0 0 33 26"><g><g transform="translate(-1514 -61)"><use xlink:href="#1h74a"/></g><g transform="translate(-1514 -61)"><use xlink:href="#1h74b"/></g><g transform="translate(-1514 -61)"><use xlink:href="#1h74c"/></g></g></symbol><symbol id="mouse" viewBox="0 0 17 29"><g><g transform="translate(-1301 -808)"><use fill-opacity="0" stroke-miterlimit="50" stroke-width="3.74" clip-path="url(&quot;#fpukb&quot;)" xlink:href="#fpuka"/></g><g transform="translate(-1301 -808)"><use fill="url(#fpukd)" xlink:href="#fpukc"/></g></g></symbol><symbol id="mouse2" viewBox="0 0 17 29"><g><g transform="translate(-1301 -808)"><use fill-opacity="0" stroke-miterlimit="50" stroke-width="3.74" clip-path="url(&quot;#ohysb&quot;)" xlink:href="#ohysa"/></g><g transform="translate(-1301 -808)"><use fill="url(#ohysd)" xlink:href="#ohysc"/></g></g></symbol><symbol id="checked" viewBox="0 0 15 12"><g><g transform="translate(-989 -1114)"><use xlink:href="#oeiya"/></g></g></symbol></svg>

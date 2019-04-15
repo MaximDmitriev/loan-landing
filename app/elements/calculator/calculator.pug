@@ -1,0 +1,57 @@
+.calc.section
+  ._wrap.wrap
+    ._title Кредитный калькулятор
+    ._info Укажите сумму займа и срок, чтобы посмотреть график платежей
+    .advantages__devider.-nomargin
+    ._container
+      ._options
+        ._options-item
+          ._options-content
+            ._options-text Занять
+            ._options-output 75 500
+            ._options-text RUB
+          input(type="range", name="sum")._options-input
+        ._options-item
+          ._options-content
+            ._options-text На срок
+            ._options-output.-small 10
+            ._options-text месяцев
+          input(type="range", name="sum")._options-input
+      ._table
+        ._table-title График платежей 
+        ._table-header 
+          ._table-index №
+          ._table-index Сумма платежа 
+          ._table-index Основной долг
+          ._table-index Проценты
+        ._table-row
+          ._table-value 1
+          ._table-value 3 058
+          ._table-value 580
+          ._table-value 3 058
+        ._table-row
+          ._table-value 1
+          ._table-value 3 058
+          ._table-value 580
+          ._table-value 3 058
+        ._table-row
+          ._table-value 1
+          ._table-value 3 058
+          ._table-value 580
+          ._table-value 3 058
+        ._table-row
+          ._table-value 1
+          ._table-value 3 058
+          ._table-value 580
+          ._table-value 3 058
+      ._form
+        ._form-title Нравятся условия? Подайте заявку
+        ._form-wrap
+          input(type="text" placeholder="Введите телефон")._form-input.-phone
+            //- +svg('call', 'calc__call-icon')
+          input(type="text" placeholder="Введите имя")._form-input.-name
+          button.mainscreen__content-btn.-nomargin Получить займ
+      ._politics
+        ._politics-checkbox
+        ._politics-txt Даю согласие на обработку моих персональных данных
+        a._politics-link Политика конфиденциальности

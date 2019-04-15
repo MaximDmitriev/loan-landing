@@ -20,6 +20,9 @@
     background-color: $main-theme;
     margin-top: 46px;
     margin-bottom: 112px;
+    &_nomargin {
+      margin: 0;
+    }
   }
   &__main-img {
     transform: translateX(47px);
