@@ -47,11 +47,14 @@
       ._form
         ._form-title Нравятся условия? Подайте заявку
         ._form-wrap
-          input(type="text" placeholder="Введите телефон")._form-input.-phone
-            //- +svg('call', 'calc__call-icon')
-          input(type="text" placeholder="Введите имя")._form-input.-name
+          ._form-input.-phone
+            input(type="text" placeholder="Введите телефон")
+            +svg('call', 'calc__call-icon')
+          ._form-input.-name
+            input(type="text" placeholder="Введите имя")
+            +svg('man', 'calc__call-icon')
           button.mainscreen__content-btn.-nomargin Получить займ
       ._politics
         ._politics-checkbox
         ._politics-txt Даю согласие на обработку моих персональных данных
-        a._politics-link Политика конфиденциальности
+        a(href="#")._politics-link Политика конфиденциальности

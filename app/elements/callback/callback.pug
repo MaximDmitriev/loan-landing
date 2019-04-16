@@ -1,0 +1,19 @@
+.callback.section
+  ._wrap.wrap
+    ._title Остались вопросы? Звоните!
+    ._content Если у вас остались вопросы по подбору займа или вы хотите уточнить условия —звоните нам Пн-Пт с 9:00 до 18:00
+    ._form
+      ._form-title Заказать обратный звонок
+      ._form-note Мы перезвоним вам в течение 5 минут
+      .calc__form-input.-callback
+        input(type="text" placeholder="Введите телефон")
+        +svg('call', 'calc__call-icon')
+      .calc__form-input.-callback
+        input(type="text" placeholder="Введите имя")
+        +svg('man', 'calc__call-icon')
+      button._form-btn Заказать звонок
+      .calc__politics.-callback
+        .calc__politics-checkbox
+        .calc__politics-txt Даю согласие на обработку моих персональных данных
+        a(href="#").calc__politics-link Политика конфиденциальности
+    img(src="img/girl.png", alt="specialist")._img

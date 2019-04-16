@@ -1,4 +1,5 @@
 .mainscreen {
+  overflow: hidden;
   position: relative;
   height: 825px;
   background-image: url('img/main-bg-build.jpg');
@@ -198,7 +199,7 @@
   }
   &__clouds {
     position: absolute;
-    top: 473px;
+    top: 453px;
   }
   &__man {
     position: absolute;
@@ -209,8 +210,8 @@
   }
   &__car {
     position: absolute;
-    right: 0;
-    // transform: translateX(544px);
+    // right: 0;
+    transform: translateX(544px);
     top: 442px;
   }
   &__scroll {

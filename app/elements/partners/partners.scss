@@ -1,0 +1,35 @@
+.partners {
+  background-color: $dark-bg;
+  padding: 90px 0;
+  &__wrap {
+    // justify-content: center;
+    align-items: center;
+  }
+  &__title {
+    margin-bottom: 23px;
+    font-size: 43px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: 0.86px;
+    color: $txt-color;
+
+  }
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 281px;
+    height: 190px;
+    background-color: transparent;
+    background-image: url('./img/part-back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
