@@ -1,0 +1,95 @@
+.total-overlay
+  .callback__form.callback__form_popup.hide
+    +svg('close', 'corner')
+    .callback__form-title Заказать обратный звонок
+    .callback__form-note Мы перезвоним вам в течение 5 минут
+    .calc__form-input.-callback
+      input(type="text" placeholder="Введите телефон")
+      +svg('call', 'calc__call-icon')
+    .calc__form-input.-callback
+      input(type="text" placeholder="Введите имя")
+      +svg('man', 'calc__call-icon')
+    button.callback__form-btn Заказать звонок
+    .calc__politics.-callback
+      .calc__politics-checkbox
+      .calc__politics-txt Даю согласие на обработку моих персональных данных
+      a(href="#").calc__politics-link Политика конфиденциальности
+
+  .thanks.hide
+    +svg('close', 'corner')
+    .thanks__title Спасибо за заявку!
+    .thanks__txt Мы перезвоним вам в течение 5 минут
+    +icon('checked')
+
+  .popup-menu.hide
+    +svg('close', 'corner')
+    .popup-menu__header
+      +icon('main-logo')
+      .popup-menu__name Региональный кредитный союз
+    .popup-menu__item
+      .popup-menu__item-circle
+        +svg('checked')
+      a(href="#").popup-menu__item-name Почему именно мы
+    .popup-menu__item
+      .popup-menu__item-circle
+        +svg('checked')
+      a(href="#").popup-menu__item-name Калькулятор
+    .popup-menu__item
+      .popup-menu__item-circle
+        +svg('checked')
+      a(href="#").popup-menu__item-name Условия
+    .popup-menu__item
+      .popup-menu__item-circle
+        +svg('checked')
+      a(href="#").popup-menu__item-name Партнёры
+    .popup-menu__item
+      .popup-menu__item-circle
+        +svg('checked')
+      a(href="#").popup-menu__item-name Новости 
+    .popup-menu__item
+      .popup-menu__item-circle
+        +svg('checked')
+      a(href="#").popup-menu__item-name Контакты
+    .popup-menu__adress
+      .popup-menu__icon
+        +icon('placeholder')._header-placeholder
+      .popup-menu__street  г.Калининград, Советский пр-кт, д.59
+    .popup-menu__callback
+      .popup-menu__icon
+        +icon('phone')._header-phone
+      ._header-content
+        a(href="tel:+79518914171") +7 (951) 891 41 71
+        p Получить консультацию
+
+.article.hide
+  +svg('close', 'inner')
+  h2.article__title Какие займы мы выдаем
+  img(src="img/pic1.png", alt="about").article__img
+  p.article__txt.
+    Всем привет! Сегодня размещаю статью-опрос вашего мнения о длинных статьях в интернете.
+  p.article__txt.
+    С каждым годом пользователи сети Интернет становятся все ленивее и ленивее. Не зря же в 
+    сети так популярные всякие глупые короткие видеоролики, фото и просто картинки. Для того 
+    чтобы развлечь себя, достаточно просто открыть глаза, не нужно напрягать мозг чтением. 
+    Всё, где текста больше, чем 2 предложения, избегается и игнорируется. Я говорю о подрастающем 
+    поколении и его отношении к чтению. И намой взгляд это печальное зрелище.
+  p.article__txt.
+    С одной стороны это логично. Ведь Интернет – это место, где информация постоянно обновляется, 
+    каждую секунду появляется что-то новое и интересное, и тратить время на чтение длинной 
+    статьи не удобно. С другой же, люди все-таки ленивые существа и читать что-то масштабное 
+    им просто лень.
+  p.article__txt.
+    Единственный, наверное, фактор, который бы все же сподвиг пользователя на чтение длинной 
+    статьи – это стиль её написания и внешняя привлекательность для читателя. Что логично как 
+    бы, если тебе что-то нравиться ты это делаешь. Понравилась статья – ты её читаешь, не важно, 
+    какая она по объему. Однако тут есть ещё один нюанс.
+    Важно чтобы длинная статья заинтересовала пользователя с самого начала, буквально с первого 
+    абзаца или даже с заголовка. Ведь именно с него пользователь начинает. Если нравиться начало, 
+    значит, есть шанс, что читатель все же дойдет до конца вашей статьи, что собственно нам и нужно.
+  .article__pagination
+    button.article__btn
+      +svg('left')
+    .article__numbers 2/30
+    button.article__btn
+      +svg('right')
+

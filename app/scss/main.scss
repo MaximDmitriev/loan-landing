@@ -58,6 +58,11 @@ input {
   width: 1170px;
 }
 
+.hide {
+  display: none;
+  visibility: hidden;
+}
+
 @import "icons";
 
 @import "../elements/mainscreen/mainscreen";
@@ -66,3 +71,7 @@ input {
 @import "../elements/term/term";
 @import "../elements/callback/callback";
 @import "../elements/partners/partners";
+@import "../elements/news/news";
+@import "../elements/contacts/contacts";
+@import "../elements/info/info";
+@import "../elements/popups/modal";

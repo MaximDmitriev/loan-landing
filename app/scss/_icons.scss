@@ -35,6 +35,21 @@
     height: 7px;
     fill: #ffffff;
   }
+  &-close {
+    width: 25px;
+    height: 25px;
+    fill: #7ec920;
+  }
+  &-left {
+    width: 10px;
+    height: 19px;
+    fill: #ffffff;
+  }
+  &-right {
+    width: 10px;
+    height: 19px;
+    fill: #ffffff;
+  }
   &.mouse {
     background: url('img/icons/mouse.png');
     width: 17px;
@@ -54,5 +69,10 @@
     background: url('img/icons/placeholder.png');
     width: 15px;
     height: 21px;
+  }
+  &.checked {
+    background: url('img/icons/checked.png');
+    width: 180px;
+    height: 180px;
   }
 }

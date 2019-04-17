@@ -1,0 +1,13 @@
+.info {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  &__wrap {
+    padding-right: 170px;
+  }
+  &__content {
+    font-size: 14px;
+    line-height: 20px;
+    color: #848484;
+    letter-spacing: 0.21px;    
+  }
+}

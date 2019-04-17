@@ -1,6 +1,6 @@
 .calc.section
   ._wrap.wrap
-    ._title Кредитный калькулятор
+    h2._title Кредитный калькулятор
     ._info Укажите сумму займа и срок, чтобы посмотреть график платежей
     .advantages__devider.-nomargin
     ._container
@@ -10,13 +10,13 @@
             ._options-text Занять
             ._options-output 75 500
             ._options-text RUB
-          input(type="range", name="sum")._options-input
+          input(type="range", name="sum" data-orientation="horizontal")#sum
         ._options-item
           ._options-content
             ._options-text На срок
             ._options-output.-small 10
             ._options-text месяцев
-          input(type="range", name="sum")._options-input
+          input(type="range", name="sum" data-orientation="horizontal")._options-input
       ._table
         ._table-title График платежей 
         ._table-header 
