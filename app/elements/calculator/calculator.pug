@@ -8,15 +8,15 @@
         ._options-item
           ._options-content
             ._options-text Занять
-            ._options-output 75 500
+            ._options-output(id="numSum") 30000
             ._options-text RUB
-          input(type="range", name="sum" data-orientation="horizontal")#sum
+          input(type="range", name="sum" data-orientation="horizontal" min="10000" max="100000" value="30000" step="5000")#sum
         ._options-item
           ._options-content
             ._options-text На срок
-            ._options-output.-small 10
+            ._options-output.-small(id="numMonth") 4
             ._options-text месяцев
-          input(type="range", name="sum" data-orientation="horizontal")._options-input
+          input(type="range", name="sum" data-orientation="horizontal" min="1" max="12" value="4")#month._options-input
       ._table
         ._table-title График платежей 
         ._table-header 
@@ -24,26 +24,26 @@
           ._table-index Сумма платежа 
           ._table-index Основной долг
           ._table-index Проценты
-        ._table-row
-          ._table-value 1
-          ._table-value 3 058
-          ._table-value 580
-          ._table-value 3 058
-        ._table-row
-          ._table-value 1
-          ._table-value 3 058
-          ._table-value 580
-          ._table-value 3 058
-        ._table-row
-          ._table-value 1
-          ._table-value 3 058
-          ._table-value 580
-          ._table-value 3 058
-        ._table-row
-          ._table-value 1
-          ._table-value 3 058
-          ._table-value 580
-          ._table-value 3 058
+        //- ._table-row
+        //-   ._table-value 1
+        //-   ._table-value 3 058
+        //-   ._table-value 580
+        //-   ._table-value 3 058
+        //- ._table-row
+        //-   ._table-value 1
+        //-   ._table-value 3 058
+        //-   ._table-value 580
+        //-   ._table-value 3 058
+        //- ._table-row
+        //-   ._table-value 1
+        //-   ._table-value 3 058
+        //-   ._table-value 580
+        //-   ._table-value 3 058
+        //- ._table-row
+        //-   ._table-value 1
+        //-   ._table-value 3 058
+        //-   ._table-value 580
+        //-   ._table-value 3 058
       ._form
         ._form-title Нравятся условия? Подайте заявку
         ._form-wrap

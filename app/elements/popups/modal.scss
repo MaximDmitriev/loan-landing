@@ -1,7 +1,10 @@
 .total-overlay {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 5;
-  display: flex;
+  display: none;
+  // display: flex;
   justify-content: center;
   width: 100%;
   min-height: 100vh;
@@ -21,7 +24,8 @@
   position: absolute;
   z-index: 10;
   top: 10%;
-  display: flex;
+  display: none;
+  // display: flex;
   flex-direction: column;
   align-items: center;
   width: 456px;
@@ -46,7 +50,8 @@
   position: absolute;
   z-index: 10;
   top: 10%;
-  display: flex;
+  display: none;
+  // display: flex;
   flex-direction: column;
   width: 456px;
   padding: 55px 0;
@@ -128,6 +133,7 @@
   }
 }
 .article {
+  display: none;
   position: absolute;
   z-index: 10;
   top: 10%;

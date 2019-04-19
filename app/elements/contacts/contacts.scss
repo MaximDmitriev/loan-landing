@@ -118,5 +118,13 @@
     font-weight: 700;
     line-height: 54px;
     letter-spacing: 1.2px;
+    transition: 0.2s;
+    box-shadow: 1px 6px 13px rgba(125, 200, 30, 0.53);
+    &:hover {
+      box-shadow: 1px 6px 13px rgba(125, 200, 30, 0.9);
+     }
+     &:active {
+       box-shadow: none;
+     }
   }
 }

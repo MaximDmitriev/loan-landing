@@ -18,12 +18,18 @@
     justify-content: space-between;
     width: 100%;
     margin-top: 55px;
+    @media (max-width: 1099px) {
+      justify-content: space-around;
+    }
   }
   &__item {
     display: flex;
     flex-direction: column;
     flex-basis: 32%;
     margin-bottom: 50px;
+    @media (max-width: 1099px) {
+      flex-basis: 45%;
+    }
   }
   &__item-number {
     margin-bottom: 26px;
@@ -64,6 +70,7 @@
   }
   &__item-circle {
     display: flex;
+    flex-shrink: 0;
     justify-content: center;
     align-items: center;
     width: 22px;
@@ -121,6 +128,14 @@
     text-transform: uppercase;
     letter-spacing: 1.32px;
     color: #ffffff;
+    transition: 0.2s;
+    box-shadow: 1px 6px 13px rgba(125, 200, 30, 0.53);
+    &:hover {
+      box-shadow: 1px 6px 13px rgba(125, 200, 30, 0.9);
+     }
+    &:active {
+      box-shadow: none;
+    }
   }
   &__consult-back {
     position: absolute;

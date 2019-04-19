@@ -40,6 +40,18 @@
       background-image: url('./img/calc.png');
       background-repeat: no-repeat;
       background-size: cover;
+      @media (max-width: 1200px) {
+        left: -45px;
+      }
+      @media (max-width: 1099px) {
+        width: 195px;
+        top: -110px;
+        left: -31px;
+      }
+    }
+    @media (max-width: 1099px) {
+      padding-right: 40px;
+      padding-left: 40px;
     }
   }
   &__options {

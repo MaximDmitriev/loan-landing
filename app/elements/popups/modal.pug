@@ -1,5 +1,5 @@
 .total-overlay
-  .callback__form.callback__form_popup.hide
+  .callback__form(id="call").callback__form_popup
     +svg('close', 'corner')
     .callback__form-title Заказать обратный звонок
     .callback__form-note Мы перезвоним вам в течение 5 минут
@@ -15,13 +15,13 @@
       .calc__politics-txt Даю согласие на обработку моих персональных данных
       a(href="#").calc__politics-link Политика конфиденциальности
 
-  .thanks.hide
+  .thanks
     +svg('close', 'corner')
     .thanks__title Спасибо за заявку!
     .thanks__txt Мы перезвоним вам в течение 5 минут
     +icon('checked')
 
-  .popup-menu.hide
+  .popup-menu
     +svg('close', 'corner')
     .popup-menu__header
       +icon('main-logo')
@@ -61,7 +61,7 @@
         a(href="tel:+79518914171") +7 (951) 891 41 71
         p Получить консультацию
 
-.article.hide
+.article
   +svg('close', 'inner')
   h2.article__title Какие займы мы выдаем
   img(src="img/pic1.png", alt="about").article__img

@@ -53,6 +53,7 @@
     width: 203px;
     height: 64px;
     border-radius: 31px;
+    box-shadow: 1px 6px 13px rgba(125, 200, 30, 0.53);
     background-image: linear-gradient(to top, #6ab717 0%, #a3d252 100%);    
     font-size: 10px;
     font-weight: 700;
@@ -60,5 +61,12 @@
     text-transform: uppercase;
     letter-spacing: 1.2px;
     color: #ffffff;
+    transition: 0.2s;
+    &:hover {
+      box-shadow: 1px 6px 13px rgba(125, 200, 30, 0.9);
+     }
+     &:active {
+       box-shadow: none;
+     }
   }
 }

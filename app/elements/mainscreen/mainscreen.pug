@@ -10,20 +10,21 @@
   img(src="img/white-clouds.png", alt="clouds")._clouds
   ._wrap.wrap
     header._header
-      ._header-company
-        +icon('main-logo')._header-logo
-        ._header-name Региональный кредитный союз
-      ._header-location
-        ._header-icon
-          +icon('placeholder')._header-placeholder
-        ._header-addres  г.Калининград, Советский пр-кт, д.59
-      ._header-contacts
-        ._header-icon
-          +icon('phone')._header-phone
-        ._header-content
-          a(href="tel:+79518914171") +7 (951) 891 41 71
-          p Получить консультацию
-        +svg('hamburger', 'header-menu-btn')
+      ._header-wrapper
+        ._header-company
+          +icon('main-logo')._header-logo
+          ._header-name Региональный кредитный союз
+        ._header-location
+          ._header-icon
+            +icon('placeholder')._header-placeholder
+          ._header-addres  г.Калининград, Советский пр-кт, д.59
+        ._header-contacts
+          ._header-icon
+            +icon('phone')._header-phone
+          ._header-content
+            a(href="tel:+79518914171") +7 (951) 891 41 71
+            p Получить консультацию
+      +svg('hamburger', 'header-menu-btn')
     ._content
       h2._content-title Деньги под залог
       ._content-txt Вы получите ответ в течение 3 часов, а деньги в течение 12 часов

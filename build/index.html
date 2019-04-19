@@ -26,21 +26,23 @@
             </div><img class="mainscreen__car" src="img/car.png" alt="car"><img class="mainscreen__man" src="img/ok-man.png" alt="ok"><img class="mainscreen__clouds" src="img/white-clouds.png" alt="clouds">
             <div class="mainscreen__wrap wrap">
                 <header class="mainscreen__header">
-                    <div class="mainscreen__header-company"><i class="icon main-logo "></i>
-                        <div class="mainscreen__header-name">Региональный кредитный союз</div>
-                    </div>
-                    <div class="mainscreen__header-location">
-                        <div class="mainscreen__header-icon"><i class="icon placeholder "></i></div>
-                        <div class="mainscreen__header-addres"> г.Калининград, Советский пр-кт, д.59</div>
-                    </div>
-                    <div class="mainscreen__header-contacts">
-                        <div class="mainscreen__header-icon"><i class="icon phone "></i></div>
-                        <div class="mainscreen__header-content"><a href="tel:+79518914171">+7 (951) 891 41 71</a>
-                            <p>Получить консультацию</p>
-                        </div><svg class="icon-hamburger header-menu-btn">
-                            <use xlink:href="img/elements.svg#hamburger"></use>
-                        </svg>
-                    </div>
+                    <div class="mainscreen__header-wrapper">
+                        <div class="mainscreen__header-company"><i class="icon main-logo "></i>
+                            <div class="mainscreen__header-name">Региональный кредитный союз</div>
+                        </div>
+                        <div class="mainscreen__header-location">
+                            <div class="mainscreen__header-icon"><i class="icon placeholder "></i></div>
+                            <div class="mainscreen__header-addres"> г.Калининград, Советский пр-кт, д.59</div>
+                        </div>
+                        <div class="mainscreen__header-contacts">
+                            <div class="mainscreen__header-icon"><i class="icon phone "></i></div>
+                            <div class="mainscreen__header-content"><a href="tel:+79518914171">+7 (951) 891 41 71</a>
+                                <p>Получить консультацию</p>
+                            </div>
+                        </div>
+                    </div><svg class="icon-hamburger header-menu-btn">
+                        <use xlink:href="img/elements.svg#hamburger"></use>
+                    </svg>
                 </header>
                 <div class="mainscreen__content">
                     <h2 class="mainscreen__content-title">Деньги под залог</h2>
@@ -58,7 +60,7 @@
         <div class="advantages section">
             <div class="advantages__wrap wrap">
                 <h2 class="advantages__title">Почему получить заем <br>у нас выгодно и удобно?</h2>
-                <div class="advantages__devider"></div><img class="advantages__main-img" src="img/happy-man.png" alt="client">
+                <div class="advantages__devider"></div>
                 <div class="advantages__images-block">
                     <div class="advantages__images-item advantages__images-item_m1"> <img src="img/adv-doc.png" alt="advantages">
                         <p>Вам не нужны <br>справки о доходах</p>
@@ -78,7 +80,7 @@
                     <div class="advantages__images-item advantages__images-item_m6"> <img src="img/adv-pig.jpg" alt="advantages">
                         <p>Не берем комиссий <br> (только вступительный и <br> паевой взнос 300 руб.)</p>
                     </div>
-                </div>
+                </div><img class="advantages__main-img" src="img/happy-man.png" alt="client">
             </div>
         </div>
         <div class="calc section">
@@ -91,16 +93,16 @@
                         <div class="calc__options-item">
                             <div class="calc__options-content">
                                 <div class="calc__options-text">Занять</div>
-                                <div class="calc__options-output">75 500</div>
+                                <div class="calc__options-output" id="numSum">30000</div>
                                 <div class="calc__options-text">RUB</div>
-                            </div><input type="range" name="sum" data-orientation="horizontal" id="sum">
+                            </div><input type="range" name="sum" data-orientation="horizontal" min="10000" max="100000" value="30000" step="5000" id="sum">
                         </div>
                         <div class="calc__options-item">
                             <div class="calc__options-content">
                                 <div class="calc__options-text">На срок</div>
-                                <div class="calc__options-output calc__options-output_small">10</div>
+                                <div class="calc__options-output calc__options-output_small" id="numMonth">4</div>
                                 <div class="calc__options-text">месяцев</div>
-                            </div><input class="calc__options-input" type="range" name="sum" data-orientation="horizontal">
+                            </div><input class="calc__options-input" type="range" name="sum" data-orientation="horizontal" min="1" max="12" value="4" id="month">
                         </div>
                     </div>
                     <div class="calc__table">
@@ -110,30 +112,6 @@
                             <div class="calc__table-index">Сумма платежа </div>
                             <div class="calc__table-index">Основной долг</div>
                             <div class="calc__table-index">Проценты</div>
-                        </div>
-                        <div class="calc__table-row">
-                            <div class="calc__table-value">1</div>
-                            <div class="calc__table-value">3 058</div>
-                            <div class="calc__table-value">580</div>
-                            <div class="calc__table-value">3 058</div>
-                        </div>
-                        <div class="calc__table-row">
-                            <div class="calc__table-value">1</div>
-                            <div class="calc__table-value">3 058</div>
-                            <div class="calc__table-value">580</div>
-                            <div class="calc__table-value">3 058</div>
-                        </div>
-                        <div class="calc__table-row">
-                            <div class="calc__table-value">1</div>
-                            <div class="calc__table-value">3 058</div>
-                            <div class="calc__table-value">580</div>
-                            <div class="calc__table-value">3 058</div>
-                        </div>
-                        <div class="calc__table-row">
-                            <div class="calc__table-value">1</div>
-                            <div class="calc__table-value">3 058</div>
-                            <div class="calc__table-value">580</div>
-                            <div class="calc__table-value">3 058</div>
                         </div>
                     </div>
                     <div class="calc__form">
@@ -339,7 +317,7 @@
             </div>
         </div>
         <div class="total-overlay">
-            <div class="callback__form callback__form_popup hide"><svg class="icon-close corner">
+            <div class="callback__form callback__form_popup" id="call"><svg class="icon-close corner">
                     <use xlink:href="img/elements.svg#close"></use>
                 </svg>
                 <div class="callback__form-title">Заказать обратный звонок</div>
@@ -355,13 +333,13 @@
                     <div class="calc__politics-txt">Даю согласие на обработку моих персональных данных</div><a class="calc__politics-link" href="#">Политика конфиденциальности</a>
                 </div>
             </div>
-            <div class="thanks hide"><svg class="icon-close corner">
+            <div class="thanks"><svg class="icon-close corner">
                     <use xlink:href="img/elements.svg#close"></use>
                 </svg>
                 <div class="thanks__title">Спасибо за заявку!</div>
                 <div class="thanks__txt">Мы перезвоним вам в течение 5 минут</div><i class="icon checked "></i>
             </div>
-            <div class="popup-menu hide"><svg class="icon-close corner">
+            <div class="popup-menu"><svg class="icon-close corner">
                     <use xlink:href="img/elements.svg#close"></use>
                 </svg>
                 <div class="popup-menu__header"><i class="icon main-logo "></i>
@@ -409,7 +387,7 @@
                 </div>
             </div>
         </div>
-        <div class="article hide"><svg class="icon-close inner">
+        <div class="article"><svg class="icon-close inner">
                 <use xlink:href="img/elements.svg#close"></use>
             </svg>
             <h2 class="article__title">Какие займы мы выдаем</h2><img class="article__img" src="img/pic1.png" alt="about">
