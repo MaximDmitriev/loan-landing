@@ -1,0 +1,22 @@
+.modal(id="callback")
+  .modal__dialog
+    .modal__content
+      .callback__form.callback__form_popup
+        button(data-role="modal-close")
+          +svg('close', 'corner')
+        .callback__form-title Заказать обратный звонок
+        .callback__form-note Мы перезвоним вам в течение 5 минут
+        .calc__form-input.-callback
+          input(type="text" placeholder="Введите телефон")
+          +svg('call', 'calc__call-icon')
+        .calc__form-input.-callback
+          input(type="text" placeholder="Введите имя")
+          +svg('man', 'calc__call-icon')
+        button.callback__form-btn Заказать звонок
+        .calc__politics.-callback
+          .calc__politics-wrapper
+            label(for="checkModal")
+              input(type="checkbox" checked)#checkModal.calc__check
+              .calc__politics-checkbox
+            .calc__politics-txt Даю согласие на обработку моих персональных данных
+          a(href="#").calc__politics-link Политика конфиденциальности

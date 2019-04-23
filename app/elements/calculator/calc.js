@@ -13,10 +13,19 @@ function buildTable(num, sum) {
     cellLoan.classList.add('calc__table-value');
     const cellPercent = document.createElement('div');
     cellPercent.classList.add('calc__table-value');
-    cellPos.textContent = i;
-    cellSum.textContent = sum;
-    cellLoan.textContent = sum + 60000;
-    cellPercent.textContent = sum * 0.38;
+
+    if (i != num) {
+      cellPos.textContent = i;
+      cellSum.textContent = ((parseInt(sum) * 0.38)/12).toFixed();
+      cellLoan.textContent = 0;
+      cellPercent.textContent = ((parseInt(sum) * 0.38)/12).toFixed();
+    }
+    else {
+      cellPos.textContent = i;
+      cellSum.textContent = ((parseInt(sum) * 0.38)/12 + parseInt(sum)).toFixed();
+      cellLoan.textContent = sum;
+      cellPercent.textContent = ((parseInt(sum) * 0.38)/12).toFixed();
+    }
     row.appendChild(cellPos);
     row.appendChild(cellSum);
     row.appendChild(cellLoan);

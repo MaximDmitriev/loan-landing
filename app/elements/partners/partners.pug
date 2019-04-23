@@ -1,13 +1,20 @@
-.partners.section
+.partners.section#parners
   ._wrap.wrap
     h2._title Наши партнеры
     .advantages__devider.-nomargin
     ._container
-      ._item
-        img(src="img/energo.png", alt="partner")
-      ._item
-        img(src="img/rlk.png", alt="partner")
-      ._item
-        img(src="img/rks.png", alt="partner")
-      ._item
-        img(src="img/rks-lombard.webp", alt="partner")                
+      .swiper-container#partners
+        .swiper-wrapper
+          .swiper-slide.partners__item
+            img(src="img/energo.png", alt="partner")
+          .swiper-slide.partners__item
+            img(src="img/rlk.png", alt="partner")
+          .swiper-slide.partners__item
+            img(src="img/rks.png", alt="partner")
+          .swiper-slide.partners__item
+            img(src="img/rks-lombard.webp", alt="partner")
+    .partners__pagination
+      button.partners__btn.partners-prev
+        +svg('left')
+      button.partners__btn.partners-next
+        +svg('right')   

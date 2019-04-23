@@ -13,7 +13,10 @@
         +svg('man', 'calc__call-icon')
       button._form-btn Заказать звонок
       .calc__politics.-callback
-        .calc__politics-checkbox
-        .calc__politics-txt Даю согласие на обработку моих персональных данных
+        .calc__politics-wrapper
+          label(for="checkCall")
+            input(type="checkbox" checked)#checkCall.calc__check
+            .calc__politics-checkbox
+          .calc__politics-txt Даю согласие на обработку моих персональных данных
         a(href="#").calc__politics-link Политика конфиденциальности
     img(src="img/girl.png", alt="specialist")._img

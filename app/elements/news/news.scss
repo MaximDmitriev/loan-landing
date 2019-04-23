@@ -1,6 +1,10 @@
 .news {
+  position: relative;
   padding-top: 100px;
   padding-bottom: 90px;
+  @media (max-width: 479px) {
+    padding: 70px 0;
+  }
   &__wrap {
     align-items: center;
   }
@@ -11,6 +15,17 @@
     line-height: 56px;
     letter-spacing: 0.86px;
     color: $txt-color;
+    @media (max-width: 949px) {
+      font-size: 38px;
+      text-align: center;
+    }
+    @media (max-width: 767px) {
+      font-size: 30px;
+    }
+    @media (max-width: 479px) {
+      font-size: 25px;
+      line-height: 34px;
+    }
   }
   &__container {
     display: flex;
@@ -26,6 +41,12 @@
     padding-bottom: 51px;
     background-color: $dark-bg;
     border-radius: 10px;
+    @media (max-width: 1200px) {
+      width: 320px;
+    }
+    @media (max-width: 479px) {
+      width: 310px;
+    }
   }
   &__card-view {
     align-self: flex-start;
@@ -33,6 +54,12 @@
   }
   &__card-img {
     max-width: 367px;
+    @media (max-width: 1200px) {
+      width: 315px;
+    }
+    @media (max-width: 479px) {
+      width: 300px;
+    }
   }
   &__card-title {
     font-size: 20px;
@@ -69,4 +96,29 @@
        box-shadow: none;
      }
   }
+  &__pagination {
+    display: none;
+    width: 100%;
+    margin-top: 60px;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 1099px) {
+      display: flex;
+    }
+
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: linear-gradient(to top, #6ab717 0%, #a3d252 100%);
+  }
+}
+.card-wrap {
+  display: flex;
+  justify-content: center;
 }

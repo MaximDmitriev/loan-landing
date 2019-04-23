@@ -7,12 +7,36 @@
     align-items: center;
     padding-top: 80px;
     padding-bottom: 90px;
+    @media (max-width: 949px) {
+      // padding-top: 60px;
+      padding-bottom: 40px;
+    }
+    @media (max-width: 767px) {
+      padding-top: 40px;
+      padding-left: 40px;
+      padding-right: 0;
+      width: 100%
+    }
+    @media (max-width: 479px) {
+      padding-left: 15px;
+    }
   }
   &__title {
     font-size: 43px;
     font-weight: 700;
     line-height: 56px;
     color: $txt-color;
+    @media (max-width: 949px) {
+      font-size: 38px;
+    }
+    @media (max-width: 767px) {
+      font-size: 30px;
+      text-align: center;
+    }
+    @media (max-width: 479px) {
+      font-size: 25px;
+      line-height: 34px;
+    }
   }
   &__info {
     margin-bottom: 30px;
@@ -21,13 +45,22 @@
     line-height: 27px;
     letter-spacing: 0.27px;
     color: $txt-color;
+    @media (max-width: 767px) {
+      font-size: 16px;
+      text-align: center;
+    }
+    @media (max-width: 479px) {
+      font-size: 15px;
+      line-height: 23px;
+    }
   }
   &__container {
     position: relative;
+    width: 90%;
     margin-top: 36px;
     padding-top: 77px;
     padding-right: 110px;
-    padding-bottom: 100px;
+    padding-bottom: 30px;
     padding-left: 100px;
     background-color: $dark-bg;
     &::before {
@@ -48,10 +81,31 @@
         top: -110px;
         left: -31px;
       }
+      @media (max-width: 949px) {
+        top: -70px;
+        left: -10px;
+        width: 210px;
+        background-size: contain;
+      }
+      @media (max-width: 479px) {
+        transform: scale(0.8);
+        top: -90px;
+        left: -50px;
+      }
     }
     @media (max-width: 1099px) {
       padding-right: 40px;
       padding-left: 40px;
+      width: 98%;
+    }
+    @media (max-width: 949px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+      padding-left: 5px;
+      padding-right: 5px;
     }
   }
   &__options {
@@ -59,9 +113,25 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 60px;
+    @media (max-width: 949px) {
+      flex-direction: column;
+    }
+    @media (max-width: 479px) {
+      margin-bottom: 15px;
+    }
   }
   &__options-item {
     flex-basis: 49%;
+    @media (max-width: 949px) {
+      flex-basis: 100%;
+      margin-left: 20px;
+      &:first-child{
+        margin-bottom: 60px;
+      }
+    }
+    @media (max-width: 767px) {
+      margin-left: 0;
+    }
   }
   &__options-content {
     display: flex;
@@ -74,6 +144,9 @@
     line-height: 27px;
     letter-spacing: 0.3px;
     color: $txt-color;
+    @media (max-width: 479px) {
+      font-size: 17px;
+    }
   }
   &__options-output {
     display: flex;
@@ -90,10 +163,27 @@
     font-weight: 700;
     line-height: 27px;
     letter-spacing: 0.38px;
+    @media (max-width: 767px) {
+      width: 125px;
+      height: 55px;
+      font-size: 23px;
+    }
+    @media (max-width: 479px) {
+      font-size: 20px;
+    }
     &_small {
       width: 112px;
       height: 65px;
+      @media (max-width: 767px) {
+        width: 85px;
+        height: 55px;
+        font-size: 23px;
+      }
+      @media (max-width: 479px) {
+        font-size: 20px;
+      }
     }
+
   }
   &__options-input {
     width: 80%;
@@ -102,7 +192,49 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: $dark-bg;
     // justify-content: center;
+
+  }
+  &__table {
+    width: 100%;
+    @media (max-width: 767px) {
+      width: 900px;
+      align-self: flex-start;
+    }
+  }
+  &__table-wrapper {
+    width: 90%;
+    background-color: $dark-bg;
+    @media (max-width: 1099px) {
+      width: 98%;
+    }
+    @media (max-width: 767px) {
+      overflow: auto;
+      width: 100%;
+    }
+  }
+  &__table-move {
+    display: none;
+    align-items: center;
+    @media (max-width: 767px) {
+      display: flex;
+    }
+    p {
+      margin: 10px 20px;
+      line-height: 27px;
+      letter-spacing: 0.24px;
+    }
+  }
+  &__table-move-img {
+    flex-shrink: 0;
+    width: 27px;
+    height: 13px;
+    background-image: url('../calculator/img/arrow-right.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    // background: url('../calculator/img/arrow-right.svg') contain no-repeat;
+    background-position: center;
   }
   &__table-title, &__form-title {
     margin-bottom: 28px;
@@ -111,6 +243,10 @@
     line-height: 27px;
     letter-spacing: 0.38px;
     color: $txt-color;
+    @media (max-width: 767px) {
+      text-align: center;
+      font-size: 22px;
+    }
   }
   &__table-header {
     display: flex;
@@ -122,6 +258,9 @@
     line-height: 27px;
     letter-spacing: 0.24px;
     color: $txt-color;
+    @media (max-width: 949px) {
+      width: 95%;
+    }
   }
   &__table-index, &__table-value {
     flex-basis: 27%;
@@ -144,16 +283,37 @@
     &:last-child {
       border: none;
     }
+    @media (max-width: 949px) {
+      width: 95%;
+    }
   }
   &__form {
-    margin-top: 40px;
+    padding-top: 40px;
+    width: 90%;
+    @media (max-width: 1099px) {
+      width: 98%;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+      padding: 40px 20px 0 20px;
+    }
+    @media (max-width: 479px) {
+      padding: 40px 0 0 0;
+    }
+
   }
   &__form-wrap {
     display: flex;
-    width: 100%;
+    width: 80%;
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
+    @media (max-width: 1099px) {
+      width: 94%;
+    }
+    @media (max-width: 949px) {
+      flex-direction: column;
+    }
   }
   &__form-input {
     position: relative;
@@ -167,14 +327,22 @@
       line-height: 27px;
       letter-spacing: 0.24px;
       color: #686868;
+      @media (max-width: 949px) {
+        width: 281px;
+        margin-right: 0;
+        margin-bottom: 16px;
+      }
     }
     &_callback {
       input {
         width: 320px;
         margin-right: 0;
+        @media (max-width: 479px) {
+          width: 265px;
+          height: 71px;
+        }
       }
       margin-bottom: 17px;
-
     }
   }
   &__call-icon {
@@ -188,16 +356,43 @@
   &__politics {
     display: flex;
     align-items: center;
-    margin-top: 56px;
+    // margin-top: 56px;
+    width: 90%;
+    padding: 56px 40px 56px 110px;
     color: #848484;
+    background-color: $dark-bg;
+    @media (max-width: 1099px) {
+      width: 98%;
+      padding: 56px 40px 56px 30px;
+    }
+    @media (max-width: 949px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+      text-align: center;
+    }
+    @media (max-width: 479px) {
+      padding: 56px 18px;
+    }
     &_callback {
       flex-wrap: wrap;
       justify-content: center;
+      padding: 30px 0;
+      width: 99%;
+      @media (max-width: 479px) {
+        align-items: flex-start;
+        padding: 30px 0;
+      }
+      .calc__politics-wrapper {
+        width: 99%;
+        align-items: flex-start;
+      }
       .calc__politics-txt {
         flex-shrink: 0;
-        width: 210px;
+        width: 98%;
         margin-left: 9px;
-        // margin-bottom: 20px;
         padding: 0;
         font-size: 14px;
       }
@@ -207,22 +402,49 @@
       }
     }
   }
+  &__politics-wrapper {
+    display: flex;
+    align-items: center;
+    @media (max-width: 479px) {
+      align-items: flex-start;
+    }
+  }
   &__politics-checkbox {
+    flex-shrink: 0;
     display: flex;
     justify-content: center;  
     align-items: center;
     width: 26px;
     height: 26px;
+    margin-left: 6px;
     box-shadow: inset 1px 2px 6px 1px rgba(80, 80, 80, 0.14);
     border-radius: 2px;
     background-color: #ffffff;
     cursor: pointer;
+    @media (max-width: 479px) {
+      margin-top: 9px;
+    }
   }
   &__politics-txt {
     line-height: 27px;
     letter-spacing: 0.24px;
     padding-left: 13px;
     padding-right: 38px;
+    @media (max-width: 479px) {
+      padding-right: 0;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+  }
+  &__politics-note {
+    display: none;
+    @media (max-width: 479px) {
+      display: block;
+      text-align: left;
+      font-size: 13px;
+      color: #848484;
+      line-height: 21.33px;
+    }
   }
   &__politics-link {
     font-size: 14px;
@@ -233,6 +455,23 @@
     padding-bottom: 6px;
     margin-left: 20px;
     cursor: pointer;
+    @media (max-width: 949px) {
+      margin-top: 20px;
+    }
+    @media (max-width: 479px) {
+      margin-left: 0;
+    }
+  }
+  &__check {
+    display: none;
+    &:checked {
+      +.calc__politics-checkbox {
+        background-image: url('../calculator/img/checked.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+    }
   }
 }
 .rangeslider {
@@ -245,6 +484,9 @@
   height: 8px;
   width: 400px;
   border-radius: 4px;
+  @media (max-width: 479px) {
+    width: 280px;
+  }
 }
 .rangeslider__handle {
   background-color: #88d23f;

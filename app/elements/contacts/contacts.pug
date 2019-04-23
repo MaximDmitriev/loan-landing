@@ -1,11 +1,11 @@
-.contacts.section
+.contacts.section#contact
   ._wrap.wrap
     h2._title Как нас найти
     .advantages__devider.-nomargin
-    ._map
+    ._map#map
     footer._footer
       ._footer-company
-        +icon('main-logo')._footer-logo
+        +icon('main-logo', 'footer-logo')
         ._footer-name Региональный кредитный союз
       ._footer-copyrights Все права защищены (с) 2019-2019
       ._footer-location
@@ -20,4 +20,4 @@
     ._info
       ._info-txt Реквизиты и правовая информация
       ._info-txt.-left Политика конфиденциальности
-      button._info-btn Получить консультацию
+      button(data-modal="#callback")._info-btn Получить консультацию

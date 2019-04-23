@@ -1,7 +1,7 @@
-.term.section
+.term.section#term
   ._wrap.wrap
     h2._title Условия предоставления займа
-    .advantages__devider.-nomargin
+    .advantages__devider.-nomargin.-term
     ._content
       ._item
         ._item-number 01
@@ -55,11 +55,11 @@
         ._item-para
           ._item-circle
             +svg('checked')
-          ._item-name Для физических лиц – 300 руб
+          ._item-name Для физических лиц – <br>300 руб
         ._item-para
           ._item-circle
             +svg('checked')
-          ._item-name Для юридических лиц – 3 000 руб.
+          ._item-name Для юридических лиц – <br>3 000 руб.
       ._item
         ._item-number 05
         ._item-title Займы предоставляются пайщикам кооператива КПК «РКЦ» 
@@ -67,4 +67,4 @@
         ._consult-back  
         a(href="tel:+79518914171")._consult-phone +7 (951) 891 41 71
         ._consult-note Бесплатная консультация
-        button._consult-btn Получить консультацию
+        button(data-modal="#callback")._consult-btn Получить консультацию

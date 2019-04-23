@@ -3,6 +3,9 @@
   padding-bottom: 30px;
   &__wrap {
     padding-right: 170px;
+    @media (max-width: 1200px) {
+      padding-right: 15px;
+    }
   }
   &__content {
     font-size: 14px;

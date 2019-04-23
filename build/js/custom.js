@@ -18,10 +18,18 @@ $('document').ready(function () {
       cellLoan.classList.add('calc__table-value');
       var cellPercent = document.createElement('div');
       cellPercent.classList.add('calc__table-value');
-      cellPos.textContent = i;
-      cellSum.textContent = sum;
-      cellLoan.textContent = sum + 60000;
-      cellPercent.textContent = sum * 0.38;
+
+      if (i != num) {
+        cellPos.textContent = i;
+        cellSum.textContent = (parseInt(sum) * 0.38 / 12).toFixed();
+        cellLoan.textContent = 0;
+        cellPercent.textContent = (parseInt(sum) * 0.38 / 12).toFixed();
+      } else {
+        cellPos.textContent = i;
+        cellSum.textContent = (parseInt(sum) * 0.38 / 12 + parseInt(sum)).toFixed();
+        cellLoan.textContent = sum;
+        cellPercent.textContent = (parseInt(sum) * 0.38 / 12).toFixed();
+      }
       row.appendChild(cellPos);
       row.appendChild(cellSum);
       row.appendChild(cellLoan);
@@ -105,36 +113,147 @@ $('document').ready(function () {
     // onSlideEnd: function(position, value) {}
   });
 
-  var callBtns = [document.querySelector('.mainscreen__content-btn'), document.querySelector('.term__consult-btn'), document.querySelector('.contacts__info-btn')],
-      overlay = document.querySelector('.total-overlay'),
-      callModal = document.querySelector('#call'),
-      closeBtn = document.querySelector('.icon-close');
+  ymaps.ready(function () {
+    var map = new ymaps.Map('map', {
+      center: [54.731597, 20.487724],
+      zoom: 13,
+      controls: ['smallMapDefaultSet']
+    });
+    var MyIconContentLayout = ymaps.templateLayoutFactory.createClass('<div class="map-div">\n                <img src="./img/icons/placeholder.png"></img>\n                \u0433. \u041A\u0430\u043B\u0438\u043D\u0438\u043D\u0433\u0440\u0430\u0434, <br>\u0421\u043E\u0432\u0435\u0442\u0441\u043A\u0438\u0439 \u043F\u0440-\u043A\u0442, \u0434.59\n            </div>');
 
-  console.log(overlay);
+    var myPlacemarkWithContent = new ymaps.Placemark([54.731597, 20.487724], {}, {
+      iconLayout: 'default#imageWithContent',
+      iconImageSize: [0, 0],
+      // Смещение левого верхнего угла иконки относительно
+      // её "ножки" (точки привязки).
+      iconImageOffset: [0, 0],
+      // Смещение слоя с содержимым относительно слоя с картинкой.
+      iconContentOffset: [-95, -40],
+      iconContentLayout: MyIconContentLayout
+    });
 
-  callBtns.forEach(function (item) {
+    map.geoObjects.add(myPlacemarkWithContent);
+  });
+
+  new Swiper($('#news-slider'), {
+    speed: 400,
+    spaceBetween: 30,
+    slidesPerView: 3,
+    simulateTouch: false,
+    navigation: {
+      nextEl: '.news-next',
+      prevEl: '.news-prev'
+    },
+    breakpoints: {
+      // when window width is <= 320px
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 10
+      },
+      1100: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+        simulateTouch: true
+      }
+    }
+  });
+
+  new Swiper($('#partners'), {
+    speed: 400,
+    spaceBetween: 30,
+    slidesPerView: 4,
+    simulateTouch: false,
+    navigation: {
+      nextEl: '.partners-next',
+      prevEl: '.partners-prev'
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 0
+      },
+      950: {
+        slidesPerView: 2
+      },
+      1200: {
+        slidesPerView: 3,
+        simulateTouch: true
+      }
+    }
+  });
+
+  new Kmodal('#callback', {});
+
+  var menuBtn = document.querySelector('.menu-btn'),
+      menuCloseBtn = document.querySelector('.popup-close'),
+      menu = document.querySelector('.popup-menu');
+
+  menuBtn.addEventListener('click', function () {
+    menu.classList.add('show');
+  });
+
+  menuCloseBtn.addEventListener('click', function () {
+    menu.classList.remove('show');
+  });
+
+  var linkAdv = document.querySelector('#menuAdv'),
+      linkCalc = document.querySelector('#menuCalc'),
+      linkTerm = document.querySelector('#menuTerm'),
+      linkPrtn = document.querySelector('#menuPrtn'),
+      linkNews = document.querySelector('#menuNews'),
+      linkCont = document.querySelector('#menuCont'),
+      sectionAdv = document.querySelector('#advantages'),
+      sectionCalc = document.querySelector('#calc'),
+      sectionTerm = document.querySelector('#term'),
+      sectionPrtn = document.querySelector('#parners'),
+      sectionNews = document.querySelector('#news'),
+      sectionCont = document.querySelector('#contact');
+
+  linkAdv.addEventListener('click', function (e) {
+    e.preventDefault();
+    menu.classList.remove('show');
+    sectionAdv.scrollIntoView({ block: "start", behavior: "smooth" });
+  });
+  linkCalc.addEventListener('click', function (e) {
+    e.preventDefault();
+    menu.classList.remove('show');
+    sectionCalc.scrollIntoView({ block: "start", behavior: "smooth" });
+  });
+  linkTerm.addEventListener('click', function (e) {
+    e.preventDefault();
+    menu.classList.remove('show');
+    sectionTerm.scrollIntoView({ block: "start", behavior: "smooth" });
+  });
+  linkPrtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    menu.classList.remove('show');
+    sectionPrtn.scrollIntoView({ block: "start", behavior: "smooth" });
+  });
+  linkNews.addEventListener('click', function (e) {
+    e.preventDefault();
+    menu.classList.remove('show');
+    sectionNews.scrollIntoView({ block: "start", behavior: "smooth" });
+  });
+  linkCont.addEventListener('click', function (e) {
+    e.preventDefault();
+    menu.classList.remove('show');
+    sectionCont.scrollIntoView({ block: "start", behavior: "smooth" });
+  });
+
+  var newsBtns = document.querySelectorAll('.news__card-btn'),
+      newsBtnsClose = document.querySelectorAll('.article__close'),
+      article = document.querySelector('.article__wrapper');
+
+  newsBtns.forEach(function (item) {
     item.addEventListener('click', function () {
-      overlay.style.display = 'flex';
-      callModal.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
+      article.classList.add('article__wrapper_show');
     });
   });
-
-  closeBtn.addEventListener('click', function () {
-    overlay.style.display = 'none';
-    callModal.style.display = 'none';
-    document.body.style.overflow = '';
+  newsBtnsClose.forEach(function (item) {
+    item.addEventListener('click', function () {
+      article.classList.remove('article__wrapper_show');
+    });
   });
-
-  // let month = $('#month').onSlide();
-
-  console.log('---', month);
-  // const month = document.querySelector('#month');
-
-  // month.addEventListener('click', () => console.log(month.value));
-
-
-  // console.log(month);
 });
 // window.addEventListener('DOMContentLoaded', () => {
 

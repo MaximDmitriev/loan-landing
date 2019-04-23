@@ -1,4 +1,4 @@
-.calc.section
+.calc.section#calc
   ._wrap.wrap
     h2._title Кредитный калькулятор
     ._info Укажите сумму займа и срок, чтобы посмотреть график платежей
@@ -8,15 +8,16 @@
         ._options-item
           ._options-content
             ._options-text Занять
-            ._options-output(id="numSum") 30000
+            ._options-output(id="numSum") 100000
             ._options-text RUB
-          input(type="range", name="sum" data-orientation="horizontal" min="10000" max="100000" value="30000" step="5000")#sum
+          input(type="range", name="sum" data-orientation="horizontal" min="100000" max="10000000" value="30000" step="10000")#sum
         ._options-item
           ._options-content
             ._options-text На срок
             ._options-output.-small(id="numMonth") 4
             ._options-text месяцев
-          input(type="range", name="sum" data-orientation="horizontal" min="1" max="12" value="4")#month._options-input
+          input(type="range", name="sum" data-orientation="horizontal" min="1" max="24" value="4")#month._options-input
+    ._table-wrapper
       ._table
         ._table-title График платежей 
         ._table-header 
@@ -24,37 +25,24 @@
           ._table-index Сумма платежа 
           ._table-index Основной долг
           ._table-index Проценты
-        //- ._table-row
-        //-   ._table-value 1
-        //-   ._table-value 3 058
-        //-   ._table-value 580
-        //-   ._table-value 3 058
-        //- ._table-row
-        //-   ._table-value 1
-        //-   ._table-value 3 058
-        //-   ._table-value 580
-        //-   ._table-value 3 058
-        //- ._table-row
-        //-   ._table-value 1
-        //-   ._table-value 3 058
-        //-   ._table-value 580
-        //-   ._table-value 3 058
-        //- ._table-row
-        //-   ._table-value 1
-        //-   ._table-value 3 058
-        //-   ._table-value 580
-        //-   ._table-value 3 058
-      ._form
-        ._form-title Нравятся условия? Подайте заявку
-        ._form-wrap
-          ._form-input.-phone
-            input(type="text" placeholder="Введите телефон")
-            +svg('call', 'calc__call-icon')
-          ._form-input.-name
-            input(type="text" placeholder="Введите имя")
-            +svg('man', 'calc__call-icon')
-          button.mainscreen__content-btn.-nomargin Получить займ
-      ._politics
-        ._politics-checkbox
+      ._table-move 
+        p Листайте вправо
+        ._table-move-img
+    ._form
+      ._form-title Нравятся условия? Подайте заявку
+      ._form-wrap
+        ._form-input.-phone
+          input(type="text" placeholder="Введите телефон")
+          +svg('call', 'calc__call-icon')
+        ._form-input.-name
+          input(type="text" placeholder="Введите имя")
+          +svg('man', 'calc__call-icon')
+        button.mainscreen__content-btn.-nomargin Получить займ
+    ._politics
+      ._politics-wrapper
+        label(for="check")
+          input(type="checkbox" checked)#check.calc__check
+          ._politics-checkbox
         ._politics-txt Даю согласие на обработку моих персональных данных
-        a(href="#")._politics-link Политика конфиденциальности
+      ._politics-note * График рассчитан исходя из средней ставки и может отличаться от согласованного для вас
+      a(href="#")._politics-link Политика конфиденциальности
