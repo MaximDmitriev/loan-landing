@@ -1,5 +1,6 @@
 
 new Kmodal( '#callback', {});
+new Kmodal( '#article', {});
 
 const menuBtn = document.querySelector('.menu-btn'),
       menuCloseBtn = document.querySelector('.popup-close'),
@@ -63,13 +64,13 @@ const newsBtns = document.querySelectorAll('.news__card-btn'),
       newsBtnsClose = document.querySelectorAll('.article__close'),
       article = document.querySelector('.article__wrapper');
 
-newsBtns.forEach((item) => {
-  item.addEventListener('click', () => {
-    article.classList.add('article__wrapper_show');
-  });
-});
-newsBtnsClose.forEach((item) => {
-  item.addEventListener('click', () => {
-    article.classList.remove('article__wrapper_show');
-  });
-}); 
+// newsBtns.forEach((item) => {
+//   item.addEventListener('click', () => {
+//     article.classList.add('article__wrapper_show');
+//   });
+// });
+// newsBtnsClose.forEach((item) => {
+//   item.addEventListener('click', () => {
+//     article.classList.remove('article__wrapper_show');
+//   });
+// }); 

@@ -65,17 +65,16 @@
     width: 460px;
     padding: 50px 0;
     background-color: $dark-bg;
-    &_popup {
-      // position: absolute;
-      // top: 10%;
-      // z-index: 10;
-    }
+
     @media (max-width: 949px) {
       width: 420px;
       padding: 25px 0;
     }
     @media (max-width: 479px) {
       width: 300px;
+    }
+    &_popup {
+      padding-top: 60px;
     }
   }
   &__form-title {
@@ -87,6 +86,7 @@
     @media (max-width: 479px) {
       text-align: center;
       padding: 20px 0;
+      margin-top: 15px;
     }
   }
   &__form-note {
@@ -111,12 +111,14 @@
     letter-spacing: 1.32px;
     color: #ffffff;
     transition: 0.2s;
+    border-bottom: 3px solid #6AA925; 
     box-shadow: 1px 6px 13px rgba(125, 200, 30, 0.53);
     &:hover {
       box-shadow: 1px 6px 13px rgba(125, 200, 30, 0.9);
      }
     &:active {
       box-shadow: none;
+      border: none;
     }
     &::after {
       content: '';

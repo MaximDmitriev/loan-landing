@@ -1,7 +1,7 @@
 .calc.section#calc
   ._wrap.wrap
-    h2._title Кредитный калькулятор
-    ._info Укажите сумму займа и срок, чтобы посмотреть график платежей
+    h2._title Кредитный <br> калькулятор
+    ._info Укажите сумму займа и <br> срок, чтобы посмотреть <br> график платежей
     .advantages__devider.-nomargin
     ._container
       ._options
@@ -17,7 +17,7 @@
             ._options-output.-small(id="numMonth") 4
             ._options-text месяцев
           input(type="range", name="sum" data-orientation="horizontal" min="1" max="24" value="4")#month._options-input
-    ._table-wrapper
+    ._table-wrapper#scroll
       ._table
         ._table-title График платежей 
         ._table-header 
@@ -29,7 +29,7 @@
         p Листайте вправо
         ._table-move-img
     ._form
-      ._form-title Нравятся условия? Подайте заявку
+      ._form-title Нравятся условия? <br>Подайте заявку
       ._form-wrap
         ._form-input.-phone
           input(type="text" placeholder="Введите телефон")
@@ -43,6 +43,6 @@
         label(for="check")
           input(type="checkbox" checked)#check.calc__check
           ._politics-checkbox
-        ._politics-txt Даю согласие на обработку моих персональных данных
+        ._politics-txt <i>Даю согласие на обработку моих персональных данных</i>
       ._politics-note * График рассчитан исходя из средней ставки и может отличаться от согласованного для вас
       a(href="#")._politics-link Политика конфиденциальности

@@ -133,6 +133,7 @@ $('document').ready(function () {
     });
 
     map.geoObjects.add(myPlacemarkWithContent);
+    map.behaviors.disable('scrollZoom');
   });
 
   new Swiper($('#news-slider'), {
@@ -140,6 +141,7 @@ $('document').ready(function () {
     spaceBetween: 30,
     slidesPerView: 3,
     simulateTouch: false,
+    loop: true,
     navigation: {
       nextEl: '.news-next',
       prevEl: '.news-prev'
@@ -183,6 +185,7 @@ $('document').ready(function () {
   });
 
   new Kmodal('#callback', {});
+  new Kmodal('#article', {});
 
   var menuBtn = document.querySelector('.menu-btn'),
       menuCloseBtn = document.querySelector('.popup-close'),
@@ -244,17 +247,14 @@ $('document').ready(function () {
       newsBtnsClose = document.querySelectorAll('.article__close'),
       article = document.querySelector('.article__wrapper');
 
-  newsBtns.forEach(function (item) {
-    item.addEventListener('click', function () {
-      article.classList.add('article__wrapper_show');
-    });
-  });
-  newsBtnsClose.forEach(function (item) {
-    item.addEventListener('click', function () {
-      article.classList.remove('article__wrapper_show');
-    });
-  });
+  // newsBtns.forEach((item) => {
+  //   item.addEventListener('click', () => {
+  //     article.classList.add('article__wrapper_show');
+  //   });
+  // });
+  // newsBtnsClose.forEach((item) => {
+  //   item.addEventListener('click', () => {
+  //     article.classList.remove('article__wrapper_show');
+  //   });
+  // }); 
 });
-// window.addEventListener('DOMContentLoaded', () => {
-
-// });

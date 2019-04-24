@@ -3,6 +3,7 @@ new Swiper($('#news-slider'), {
   spaceBetween: 30,
   slidesPerView: 3,
   simulateTouch: false,
+  loop: true,
   navigation: {
     nextEl: '.news-next',
     prevEl: '.news-prev',

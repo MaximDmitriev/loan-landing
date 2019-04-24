@@ -3,7 +3,7 @@
     ._info-shadow
     ._info-action Специальное предложение
     img(src="img/cashback.png", alt="cashback")._info-cash 
-    ._info-txt Возвращаем до 20% от суммы уплаченных процентов
+    ._info-txt Возвращаем до 20% <br>от суммы уплаченных процентов
 
   img(src="img/car.png", alt="car")._car
   img(src="img/ok-man.png", alt="ok")._man
@@ -31,16 +31,16 @@
         +svg('hamburger', 'header-menu-btn')
     ._content
       h2._content-title Деньги под залог
-      ._content-txt Вы получите ответ в течение 3 часов, а деньги в течение 12 часов
+      ._content-txt Вы получите ответ в течение 3 часов,<br> а деньги <br> в течение 12 часов
       button(data-modal="#callback")._content-btn Получить займ
       ._content-info-group
         ._content-info-item.
           до <span>1 млн</span> рублей<br> под залог авто
         ._content-info-item.
           до <span>10 млн</span> рублей<br> под залог недвижимости
-    ._scroll
-      +icon('mouse', 'mainscreen__mouse')
-      p Листайте вниз
+    //- ._scroll
+    //-   +icon('mouse', 'mainscreen__mouse')
+    //-   p Листайте вниз
   .popup-menu
     button.popup-close
       +svg('close', 'corner')

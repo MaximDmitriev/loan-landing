@@ -1,6 +1,6 @@
 .term {
   padding-top: 90px;
-  padding-bottom: 140px;
+  padding-bottom: 30px;
   @media (max-width: 767px) {
     padding-bottom: 40px;
   }
@@ -47,7 +47,7 @@
     display: flex;
     flex-direction: column;
     flex-basis: 32%;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
     @media (max-width: 1099px) {
       flex-basis: 45%;
     }
@@ -86,6 +86,19 @@
     font-weight: 500;
     line-height: 27px;
     letter-spacing: 0.24px;
+    br {
+      &:last-child {
+        display: none;
+      }
+      @media (max-width: 479px) {
+        &:last-child {
+          display: block;
+        }
+        &:nth-child(2) {
+          display: none;
+        }
+      }
+    }
   }
   &__item-para {
     display: flex;
@@ -117,12 +130,23 @@
       font-size: 15px;
       letter-spacing: 0.22px;
     }
+    br {
+      display: none; 
+      @media (max-width: 479px) {
+        display: block;
+      }
+    }
   }
   &__item-note {
     color: #686868;
-    font-family: "Gotham Pro";
     line-height: 27px;
     letter-spacing: 0.24px;
+    br {
+      display: none; 
+      @media (max-width: 479px) {
+        display: block;
+      }
+    }
   }
   &__consult {
     position: relative;
@@ -131,10 +155,14 @@
     align-items: center;
     width: 329px;
     height: 234px;
+    margin-right: 55px;
     background-image: url('./img/back-term.png');
     background-size: contain;
     background-color: transparent;
     background-repeat: no-repeat;
+    @media (max-width: 479px) {
+      margin-right: 0;
+    }
   }
   &__consult-phone {
     margin-top: 25px;
@@ -163,12 +191,14 @@
     letter-spacing: 1.32px;
     color: #ffffff;
     transition: 0.2s;
+    border-bottom: 3px solid #6AA925; 
     box-shadow: 1px 6px 13px rgba(125, 200, 30, 0.53);
     &:hover {
       box-shadow: 1px 6px 13px rgba(125, 200, 30, 0.9);
      }
     &:active {
       box-shadow: none;
+      border: none;
     }
   }
   &__consult-back {
