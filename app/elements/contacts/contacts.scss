@@ -60,6 +60,7 @@
     display: flex;
     align-items: center;
     flex-basis: 20%;
+    justify-content: space-around;
     @media (max-width: 479px) {
       order: -1;
     }
@@ -79,7 +80,7 @@
       padding-left: 5px;
       padding-right: 0;
       margin-right: 0;
-      max-width: 140px;
+      max-width: 100px;
     }
   }
   &__footer-copyrights {

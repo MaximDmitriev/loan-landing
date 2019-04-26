@@ -1,5 +1,25 @@
 
+
 const calc = document.querySelector('.calc__table');
+function viewNumbers(number) {
+  const string = number.toString();
+  const arr = string.split('');
+  let sortArr = [];
+  let count = 0;
+  for (let i = arr.length - 1; i > -1; i-- ) {
+    sortArr.unshift(arr[i]);
+    count++;
+    if (count === 3) {
+      count = 0;
+      sortArr.unshift(' ');
+    }
+  }
+  if (sortArr[0] === '') sortArr.shift();
+  
+  const beautyNum = sortArr.join('');
+
+  return beautyNum;
+}
 
 function buildTable(num, sum) {
   for (let i = 1; i < num + 1; i++) {
@@ -16,15 +36,15 @@ function buildTable(num, sum) {
 
     if (i != num) {
       cellPos.textContent = i;
-      cellSum.textContent = ((parseInt(sum) * 0.38)/12).toFixed();
+      cellSum.textContent = viewNumbers(((parseInt(sum) * 0.38)/12).toFixed());
       cellLoan.textContent = 0;
-      cellPercent.textContent = ((parseInt(sum) * 0.38)/12).toFixed();
+      cellPercent.textContent = viewNumbers(((parseInt(sum) * 0.38)/12).toFixed());
     }
     else {
       cellPos.textContent = i;
-      cellSum.textContent = ((parseInt(sum) * 0.38)/12 + parseInt(sum)).toFixed();
-      cellLoan.textContent = sum;
-      cellPercent.textContent = ((parseInt(sum) * 0.38)/12).toFixed();
+      cellSum.textContent = viewNumbers(((parseInt(sum) * 0.38)/12 + parseInt(sum)).toFixed());
+      cellLoan.textContent = viewNumbers(sum);
+      cellPercent.textContent = viewNumbers(((parseInt(sum) * 0.38)/12).toFixed());
     }
     row.appendChild(cellPos);
     row.appendChild(cellSum);
@@ -55,34 +75,22 @@ $('#month').rangeslider({
 
   // // Callback function
   onInit: function() {
-    buildTable(4, 30000);
+    buildTable(4, 100000);
+    document.querySelector('#numSum').textContent = viewNumbers(100000);
   },
 
   // Callback function
   onSlide: function(position, value) {
-    let data = [],
-        dataRow = {
-          pos: null,
-          sum: null,
-          loan: null,
-          percent: null
-        },
-
-        month = value,
-        total = document.querySelector('#numSum').textContent;
-    
-    
+  
     deleteAllRows();
-    const sum = parseInt(document.querySelector('#numSum').textContent);
-    buildTable(value, sum);
+    let sum = document.querySelector('#numSum').textContent;
+    sum = sum.replace(new RegExp(' ', 'g'), '');
+
+    buildTable(value, parseInt(sum));
 
     document.querySelector('#numMonth').textContent = value;
 
   },
-
-  // // Callback function
-  // onSlideEnd: function(position, value) {
-  // }
 });
 
 
@@ -99,20 +107,19 @@ $('#sum').rangeslider({
   fillClass: 'rangeslider__fill',
   handleClass: 'rangeslider__handle',
 
-  // // Callback function
-  // onInit: function() {},
 
-  // Callback function
   onSlide: function(position, value) {
-    document.querySelector('#numSum').textContent = value;
     deleteAllRows();
     const num = parseInt(document.querySelector('#numMonth').textContent);
     buildTable(num, value);
+    document.querySelector('#numSum').textContent = viewNumbers(value);
 
   },
 
-  // // Callback function
-  // onSlideEnd: function(position, value) {}
 });
 
 
+// const container = document.querySelector('#scroll');
+// Ps.initialize(container, {
+//   maxScrollbarLength: 50
+// });

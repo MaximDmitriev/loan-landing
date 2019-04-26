@@ -1,8 +1,9 @@
 .calc {
-  background: url('./img/clouds-free.png');
-  background-size: cover;
+  background: url('./img/clouds-free.jpg');
+  background-size: auto;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
+  background-color: #fff;
   &__wrap {
     align-items: center;
     padding-top: 160px;
@@ -132,7 +133,7 @@
     }
     @media (max-width: 479px) {
       margin-bottom: 15px;
-      margin-left: 10px;
+      padding-left: 10px;
     }
   }
   &__options-item {
@@ -167,7 +168,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 145px;
+    width: 158px;
     height: 65px;
     margin-left: 12px;
     margin-right: 19px;
@@ -222,6 +223,10 @@
     }
   }
   &__table-wrapper {
+    //////
+    position: relative;
+    // overflow: hidden;
+    ////
     width: 90%;
     background-color: $dark-bg;
     @media (max-width: 1099px) {
@@ -230,29 +235,37 @@
     @media (max-width: 767px) {
       overflow: auto;
       width: 100%;
-      &::-webkit-scrollbar {
-        // width: 6px;
-        height: 14px;
-        padding-right: 6px;
-        background-color: #fff;
-      }
-      // &:start {
-      //   margin-top: 6px;
+
+      ////
+
+      // &::-webkit-scrollbar {
+      //   // width: 6px;
+      //   height: 14px;
+      //   padding-right: 6px;
+      //   background-color: #fff;
       // }
-      &::-webkit-scrollbar-thumb {
-        border-radius: 7px;
-        background: $main-theme;
-        width: 10%;
-      }
-      &::-webkit-scrollbar-track {
-        // max-width: 30px;
-        border-radius: 7px;
-      }
+      // // &:start {
+      // //   margin-top: 6px;
+      // // }
+      // &::-webkit-scrollbar-thumb {
+      //   border-radius: 7px;
+      //   background: $main-theme;
+      //   width: 10%;
+      // }
+      // &::-webkit-scrollbar-track {
+      //   // max-width: 30px;
+      //   border-radius: 7px;
+      // }
+
+
+      /////
+
     }
   }
   &__table-move {
     display: none;
     align-items: center;
+    margin-bottom: 30px;
     @media (max-width: 767px) {
       display: flex;
     }
@@ -449,7 +462,7 @@
         // margin-left: 9px;
         margin-bottom: 0;
         margin-left: 4px;
-        padding: 0;
+        padding: 0 0 0 13px;
         font-size: 14px;
       }
       .calc__politics-link {
@@ -486,10 +499,9 @@
     }
   }
   &__politics-txt {
-    line-height: 27px;
+    line-height: 22px;
     letter-spacing: 0.24px;
-    padding-left: 13px;
-    padding-right: 38px;
+    padding: 0 0 0 13px;
     font-weight: 100;
     @media (max-width: 479px) {
       padding-right: 4px;
@@ -499,7 +511,8 @@
     }
   }
   &__politics-note {
-    display: none;
+    // display: none;
+    padding: 20px;
     @media (max-width: 479px) {
       display: block;
       text-align: left;
@@ -515,7 +528,7 @@
     border-bottom: 1px solid #d7d7d7;
     padding-top: 4px;
     padding-bottom: 6px;
-    margin-left: 80px;
+    margin-left: 116px;
     cursor: pointer;
     @media (max-width: 1200px) {
       margin-left: 23px;
@@ -544,10 +557,12 @@
   }
 }
 .rangeslider {
-  background-color: #fff;
+  // background-color: #fff;
+  background: repeating-linear-gradient(135deg, #fff, #fff 10px, #f3faec 10px, #f3faec 20px);
 }
 .rangeslider__fill {
-  background-color: #88d23f;
+  // background-color: #88d23f;
+  background: repeating-linear-gradient(135deg, #88d23f, #88d23f 10px, #94d652 10px, #94d652 20px);
 }
 .rangeslider--horizontal {
   height: 8px;
@@ -590,4 +605,20 @@
     background-size: contain;
     background-position: center;
   }
+}
+
+.ps__scrollbar-x-rail {
+  background-color: #fff !important;
+  height: 22px !important;
+}
+.ps>.ps__scrollbar-x-rail>.ps__scrollbar-x {
+  opacity: 1 !important;
+  background-color: #88d23f !important;
+  width: 63px ;
+  height: 19px !important;
+  border-radius: 10px !important;
+}
+.ps__rail-x,
+.ps__rail-y {
+  opacity: 1 !important;
 }

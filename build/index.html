@@ -14,11 +14,86 @@
         <meta property="og:locale" content="ru_RU">
         <meta property="og:url" content="http://yoursite.ru">
         <link rel="image_src" href="img/og-image.jpg">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.4.0/css/perfect-scrollbar.min.css">
         <link href="css/libs.min.css" rel="stylesheet" type="text/css">
         <link href="css/style.css" rel="stylesheet" type="text/css">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
     </head>
     <body>
+        <header class="section">
+            <div class="section__wrap wrap">
+                <div class="header">
+                    <div class="header__header-wrapper">
+                        <div class="header__header-company"><svg class="icon-logoHands header-logo">
+                                <use xlink:href="img/elements.svg#logoHands"></use>
+                            </svg><svg class="icon-logoText header__header-name">
+                                <use xlink:href="img/elements.svg#logoText"></use>
+                            </svg><a class="header__phone-btn" href="tel:636112"><img src="img/call.svg" alt="call"></a></div>
+                        <div class="header__header-location">
+                            <div class="header__header-icon"><i class="icon placeholder "></i></div>
+                            <div class="header__header-addres"> г.Калининград, <br> ул. Банковская, 12, оф. 5</div>
+                        </div>
+                        <div class="header__header-contacts">
+                            <div class="header__header-icon"><i class="icon phone "></i></div>
+                            <div class="header__header-content"><a href="tel:636112">636-112</a>
+                                <p>Получить консультацию</p>
+                            </div>
+                        </div>
+                    </div><button class="menu-btn"><svg class="icon-hamburger header-menu-btn">
+                            <use xlink:href="img/elements.svg#hamburger"></use>
+                        </svg></button>
+                </div>
+            </div>
+            <div class="popup-menu"><button class="popup-close"><svg class="icon-close corner">
+                        <use xlink:href="img/elements.svg#close"></use>
+                    </svg></button>
+                <div class="popup-menu__header"><svg class="icon-logoHands header-logo">
+                        <use xlink:href="img/elements.svg#logoHands"></use>
+                    </svg><svg class="icon-logoText header__header-name">
+                        <use xlink:href="img/elements.svg#logoText"></use>
+                    </svg></div>
+                <div class="popup-menu__item">
+                    <div class="popup-menu__item-circle"><svg class="icon-checked ">
+                            <use xlink:href="img/elements.svg#checked"></use>
+                        </svg></div><a class="popup-menu__item-name" href="#" id="menuAdv" data-target="advantages">Почему именно мы</a>
+                </div>
+                <div class="popup-menu__item">
+                    <div class="popup-menu__item-circle"><svg class="icon-checked ">
+                            <use xlink:href="img/elements.svg#checked"></use>
+                        </svg></div><a class="popup-menu__item-name" href="#" id="menuCalc" data-target="calc">Калькулятор</a>
+                </div>
+                <div class="popup-menu__item">
+                    <div class="popup-menu__item-circle"><svg class="icon-checked ">
+                            <use xlink:href="img/elements.svg#checked"></use>
+                        </svg></div><a class="popup-menu__item-name" href="#" id="menuTerm" data-target="term">Условия</a>
+                </div>
+                <div class="popup-menu__item">
+                    <div class="popup-menu__item-circle"><svg class="icon-checked ">
+                            <use xlink:href="img/elements.svg#checked"></use>
+                        </svg></div><a class="popup-menu__item-name" href="#" id="menuPrtn" data-target="parners">Партнёры</a>
+                </div>
+                <div class="popup-menu__item">
+                    <div class="popup-menu__item-circle"><svg class="icon-checked ">
+                            <use xlink:href="img/elements.svg#checked"></use>
+                        </svg></div><a class="popup-menu__item-name" href="#" id="menuNews" data-target="news">Новости </a>
+                </div>
+                <div class="popup-menu__item">
+                    <div class="popup-menu__item-circle"><svg class="icon-checked ">
+                            <use xlink:href="img/elements.svg#checked"></use>
+                        </svg></div><a class="popup-menu__item-name" href="#" id="menuCont" data-target="contact">Контакты</a>
+                </div>
+                <div class="popup-menu__adress">
+                    <div class="popup-menu__icon"><i class="icon placeholder "></i></div>
+                    <div class="popup-menu__street"> г.Калининград, ул. Банковская, 12, оф. 5</div>
+                </div>
+                <div class="popup-menu__callback">
+                    <div class="popup-menu__icon"><i class="icon phone "></i></div>
+                    <div class="popup-menu__callback__header-content"><a href="tel:636112">636-112</a>
+                        <p>Получить консультацию</p>
+                    </div>
+                </div>
+            </div>
+        </header>
         <div class="mainscreen section">
             <div class="mainscreen__info">
                 <div class="mainscreen__info-shadow"></div>
@@ -26,26 +101,6 @@
                 <div class="mainscreen__info-txt">Возвращаем до 20% <br>от суммы уплаченных процентов</div>
             </div><img class="mainscreen__car" src="img/car.png" alt="car"><img class="mainscreen__man" src="img/ok-man.png" alt="ok"><img class="mainscreen__clouds" src="img/white-clouds.png" alt="clouds">
             <div class="mainscreen__wrap wrap">
-                <header class="mainscreen__header">
-                    <div class="mainscreen__header-wrapper">
-                        <div class="mainscreen__header-company"><i class="icon main-logo header-logo"></i>
-                            <div class="mainscreen__header-name">Региональный кредитный союз</div>
-                            <div class="mainscreen__phone-btn"><img src="img/call.svg" alt="call"></div>
-                        </div>
-                        <div class="mainscreen__header-location">
-                            <div class="mainscreen__header-icon"><i class="icon placeholder "></i></div>
-                            <div class="mainscreen__header-addres"> г.Калининград, <br> Советский пр-кт, д.59</div>
-                        </div>
-                        <div class="mainscreen__header-contacts">
-                            <div class="mainscreen__header-icon"><i class="icon phone "></i></div>
-                            <div class="mainscreen__header-content"><a href="tel:+79518914171">+7 (951) 891 41 71</a>
-                                <p>Получить консультацию</p>
-                            </div>
-                        </div>
-                    </div><button class="menu-btn"><svg class="icon-hamburger header-menu-btn">
-                            <use xlink:href="img/elements.svg#hamburger"></use>
-                        </svg></button>
-                </header>
                 <div class="mainscreen__content">
                     <h2 class="mainscreen__content-title">Деньги под залог</h2>
                     <div class="mainscreen__content-txt">Вы получите ответ в течение 3 часов,<br> а деньги <br> в течение 12 часов</div><button class="mainscreen__content-btn" data-modal="#callback">Получить займ</button>
@@ -55,57 +110,10 @@
                     </div>
                 </div>
             </div>
-            <div class="popup-menu"><button class="popup-close"><svg class="icon-close corner">
-                        <use xlink:href="img/elements.svg#close"></use>
-                    </svg></button>
-                <div class="popup-menu__header"><i class="icon main-logo "></i>
-                    <div class="popup-menu__name">Региональный кредитный союз</div>
-                </div>
-                <div class="popup-menu__item">
-                    <div class="popup-menu__item-circle"><svg class="icon-checked ">
-                            <use xlink:href="img/elements.svg#checked"></use>
-                        </svg></div><a class="popup-menu__item-name" href="#" id="menuAdv">Почему именно мы</a>
-                </div>
-                <div class="popup-menu__item">
-                    <div class="popup-menu__item-circle"><svg class="icon-checked ">
-                            <use xlink:href="img/elements.svg#checked"></use>
-                        </svg></div><a class="popup-menu__item-name" href="#" id="menuCalc">Калькулятор</a>
-                </div>
-                <div class="popup-menu__item">
-                    <div class="popup-menu__item-circle"><svg class="icon-checked ">
-                            <use xlink:href="img/elements.svg#checked"></use>
-                        </svg></div><a class="popup-menu__item-name" href="#" id="menuTerm">Условия</a>
-                </div>
-                <div class="popup-menu__item">
-                    <div class="popup-menu__item-circle"><svg class="icon-checked ">
-                            <use xlink:href="img/elements.svg#checked"></use>
-                        </svg></div><a class="popup-menu__item-name" href="#" id="menuPrtn">Партнёры</a>
-                </div>
-                <div class="popup-menu__item">
-                    <div class="popup-menu__item-circle"><svg class="icon-checked ">
-                            <use xlink:href="img/elements.svg#checked"></use>
-                        </svg></div><a class="popup-menu__item-name" href="#" id="menuNews">Новости </a>
-                </div>
-                <div class="popup-menu__item">
-                    <div class="popup-menu__item-circle"><svg class="icon-checked ">
-                            <use xlink:href="img/elements.svg#checked"></use>
-                        </svg></div><a class="popup-menu__item-name" href="#" id="menuCont">Контакты</a>
-                </div>
-                <div class="popup-menu__adress">
-                    <div class="popup-menu__icon"><i class="icon placeholder "></i></div>
-                    <div class="popup-menu__street"> г.Калининград, Советский пр-кт, д.59</div>
-                </div>
-                <div class="popup-menu__callback">
-                    <div class="popup-menu__icon"><i class="icon phone "></i></div>
-                    <div class="popup-menu__callback__header-content"><a href="tel:+79518914171">+7 (951) 891 41 71</a>
-                        <p>Получить консультацию</p>
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="advantages section" id="advantages">
             <div class="advantages__wrap wrap">
-                <h2 class="advantages__title">Почему получить <br>заем <br>у нас выгодно <br>и удобно?</h2>
+                <h2 class="advantages__title">Почему получить <br>займ у нас <br> выгодно <br>и удобно?</h2>
                 <div class="advantages__devider"></div>
                 <div class="advantages__images-block">
                     <div class="advantages__images-item advantages__images-item_m1"> <img src="img/adv-doc.png" alt="advantages">
@@ -115,16 +123,16 @@
                         <p>Вы получите деньги <br>в течение 12 часов</p>
                     </div>
                     <div class="advantages__images-item advantages__images-item_m3"> <img src="img/adv-sendclock.jpg" alt="advantages">
-                        <p>Досрочное погашение <br> в любой момент и в <br> любых <br>суммах</p>
+                        <p>Досрочное погашение <br> в любой момент <br> и в любых <br>суммах</p>
                     </div>
                     <div class="advantages__images-item advantages__images-item_m4"> <img src="img/adv-sert.jpg" alt="advantages">
                         <p>Оформляем договор займа <br> по законодательству РФ</p>
                     </div>
                     <div class="advantages__images-item advantages__images-item_m5"> <img src="img/adv-clock.png" alt="advantages">
-                        <p>Вы получите ответ в <br> течение 3 часов</p>
+                        <p>Вы получите ответ <br> в течение 3 часов</p>
                     </div>
                     <div class="advantages__images-item advantages__images-item_m6"> <img src="img/adv-pig.jpg" alt="advantages">
-                        <p>Не берем комиссий <br> (только вступительный и <br> паевой взнос 300 руб.)</p>
+                        <p>Не берем комиссий <br> (только вступительный <br> и паевой взнос 300 руб.)</p>
                     </div>
                 </div><img class="advantages__main-img" src="img/happy-man.png" alt="client">
             </div>
@@ -168,6 +176,7 @@
                     </div>
                 </div>
                 <div class="calc__form">
+                    <div class="calc__politics-note">* График рассчитан исходя из средней ставки и может отличаться от согласованного для вас</div>
                     <div class="calc__form-title">Нравятся условия? <br>Подайте заявку</div>
                     <div class="calc__form-wrap">
                         <div class="calc__form-input calc__form-input_phone"><input type="text" placeholder="Введите телефон"><svg class="icon-call calc__call-icon">
@@ -182,9 +191,8 @@
                     <div class="calc__politics-wrapper"><label for="check"><input class="calc__check" type="checkbox" checked id="check">
                             <div class="calc__politics-checkbox"></div>
                         </label>
-                        <div class="calc__politics-txt"><i>Даю согласие на обработку моих персональных данных</i></div>
-                    </div>
-                    <div class="calc__politics-note">* График рассчитан исходя из средней ставки и может отличаться от согласованного для вас</div><a class="calc__politics-link" href="#">Политика конфиденциальности</a>
+                        <div class="calc__politics-txt">Даю согласие на обработку моих персональных данных</div>
+                    </div><a class="calc__politics-link" href="#">Политика конфиденциальности</a>
                 </div>
             </div>
         </div>
@@ -262,7 +270,7 @@
                     </div>
                     <div class="term__item">
                         <div class="term__item-number">04</div>
-                        <div class="term__item-title">Для вступления в кооператив <br> необходимо уплатить вступительный и <br> паевой <br> взносы в общем размере:</div>
+                        <div class="term__item-title">Для вступления в кооператив <br> необходимо уплатить вступительный <br>и паевой <br> взносы в общем размере:</div>
                         <div class="term__item-para">
                             <div class="term__item-circle"><svg class="icon-checked ">
                                     <use xlink:href="img/elements.svg#checked"></use>
@@ -281,7 +289,7 @@
                         <div class="term__item-title">Займы предоставляются пайщикам кооператива <br> КПК «РКЦ» </div>
                     </div>
                     <div class="term__consult">
-                        <div class="term__consult-back"> </div><a class="term__consult-phone" href="tel:+79518914171">+7 (951) 891 41 71</a>
+                        <div class="term__consult-back"> </div><a class="term__consult-phone" href="tel:636112">636-112</a>
                         <div class="term__consult-note">Бесплатная консультация</div><button class="term__consult-btn" data-modal="#callback">Получить консультацию</button>
                     </div>
                 </div>
@@ -427,17 +435,19 @@
                 <div class="advantages__devider advantages__devider_nomargin"></div>
                 <div class="contacts__map" id="map"></div>
                 <footer class="contacts__footer">
-                    <div class="contacts__footer-company"><i class="icon main-logo footer-logo"></i>
-                        <div class="contacts__footer-name">Региональный кредитный союз</div>
-                    </div>
+                    <div class="contacts__footer-company"><svg class="icon-logoHands header-logo">
+                            <use xlink:href="img/elements.svg#logoHands"></use>
+                        </svg><svg class="icon-logoText contacts__footer-name">
+                            <use xlink:href="img/elements.svg#logoText"></use>
+                        </svg></div>
                     <div class="contacts__footer-copyrights">Все права защищены (с) 2019</div>
                     <div class="contacts__footer-location">
                         <div class="contacts__footer-icon"><i class="icon placeholder "></i></div>
-                        <div class="contacts__footer-addres"> г.Калининград, <br> Советский пр-кт, д.59</div>
+                        <div class="contacts__footer-addres"> г.Калининград, <br> ул. Банковская, 12, оф. 5</div>
                     </div>
                     <div class="contacts__footer-contacts">
                         <div class="contacts__footer-icon"><i class="icon phone "></i></div>
-                        <div class="contacts__footer-content"><a href="tel:+79518914171">+7 (951) 891 41 71</a></div>
+                        <div class="contacts__footer-content"><a href="tel:636112">636-112</a></div>
                     </div>
                 </footer>
                 <div class="contacts__info"><a class="contacts__info-txt" href="#">Реквизиты и правовая информация</a><a class="contacts__info-txt contacts__info-txt_left" href="#">Политика конфиденциальности</a><button class="contacts__info-btn" data-modal="#callback">Получить консультацию</button></div>
@@ -445,7 +455,7 @@
         </div>
         <div class="info section">
             <div class="info__wrap wrap">
-                <div class="info__content">Предложения на данном сайте доступны только для пайщиков КПК «РКЦ» на основе солидарного несения пайщиками субсидиарной ответственности по обязательствам в пределах не внесенной части дополнительного взноса каждого из пайщиков. Для вступления в кооператив необходимо уплатить вступительный и паевой взносы в общем размере: - для физических лиц – 300 руб. - для юридических лиц – 3000 руб.</div>
+                <div class="info__content">Предложения на данном сайте доступны только для пайщиков КПК «РКЦ» на основе солидарного несения пайщиками субсидиарной ответственности по обязательствам в пределах не внесенной части дополнительного взноса каждого из пайщиков. Для вступления в кооператив необходимо уплатить вступительный и паевой взносы в общем размере: <br>- для физических лиц – 300 руб. <br> - для юридических лиц – 3000 руб.</div>
             </div>
         </div>
         <div class="total-overlay">
@@ -503,6 +513,7 @@
                 </div>
             </div>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.4.0/perfect-scrollbar.min.js"></script>
         <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
         <script src="js/libs.min.js"></script>
         <script src="js/custom.js"></script>

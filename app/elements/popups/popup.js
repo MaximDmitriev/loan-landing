@@ -4,73 +4,64 @@ new Kmodal( '#article', {});
 
 const menuBtn = document.querySelector('.menu-btn'),
       menuCloseBtn = document.querySelector('.popup-close'),
-      menu = document.querySelector('.popup-menu');
+      menu = document.querySelector('.popup-menu'),
+      header = document.querySelector('header');
 
 menuBtn.addEventListener('click', () => {
   menu.classList.add('show');
+  document.body.style.overflow = "hidden";
+  header.style.height = "100vh";
+  header.style.overflow = "scroll";
 });
 
 menuCloseBtn.addEventListener('click', () => {
+  pageYOffset > 250 ? header.classList.add('scroll') : null;
   menu.classList.remove('show');
+  document.body.style.overflow = "";
+  header.style.height = "initial";
+  header.style.overflow = "initial";
+});
+
+let prevOffset = 0;
+window.addEventListener('scroll', () => {
+  pageYOffset > 250 ? header.classList.add('bg-white') : header.classList.remove('bg-white');
+  
+
+  header.style.height = "initial";
+  header.style.overflow = "initial";
+  if (pageYOffset > prevOffset) {
+    header.classList.add('scroll'); 
+    prevOffset = pageYOffset;
+  } 
+  else {
+    header.classList.remove('scroll');
+    prevOffset = pageYOffset;
+  }
+    
 });
 
 
-const linkAdv = document.querySelector('#menuAdv'),
-      linkCalc = document.querySelector('#menuCalc'),
-      linkTerm = document.querySelector('#menuTerm'),
-      linkPrtn = document.querySelector('#menuPrtn'),
-      linkNews = document.querySelector('#menuNews'),
-      linkCont = document.querySelector('#menuCont'),
 
-      sectionAdv = document.querySelector('#advantages'),
-      sectionCalc = document.querySelector('#calc'),
-      sectionTerm = document.querySelector('#term'),
-      sectionPrtn = document.querySelector('#parners'),
-      sectionNews = document.querySelector('#news'),
-      sectionCont = document.querySelector('#contact');
+const links = [
+  document.querySelector('#menuAdv'),
+  document.querySelector('#menuCalc'),
+  document.querySelector('#menuTerm'),
+  document.querySelector('#menuPrtn'),
+  document.querySelector('#menuNews'),
+  document.querySelector('#menuCont')];
 
-linkAdv.addEventListener('click', (e) => {
-  e.preventDefault();
-  menu.classList.remove('show');
-  sectionAdv.scrollIntoView({block: "start", behavior: "smooth"});
-});
-linkCalc.addEventListener('click', (e) => {
-  e.preventDefault();
-  menu.classList.remove('show');
-  sectionCalc.scrollIntoView({block: "start", behavior: "smooth"});
-});
-linkTerm.addEventListener('click', (e) => {
-  e.preventDefault();
-  menu.classList.remove('show');
-  sectionTerm.scrollIntoView({block: "start", behavior: "smooth"});
-});
-linkPrtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  menu.classList.remove('show');
-  sectionPrtn.scrollIntoView({block: "start", behavior: "smooth"});
-});
-linkNews.addEventListener('click', (e) => {
-  e.preventDefault();
-  menu.classList.remove('show');
-  sectionNews.scrollIntoView({block: "start", behavior: "smooth"});
-});
-linkCont.addEventListener('click', (e) => {
-  e.preventDefault();
-  menu.classList.remove('show');
-  sectionCont.scrollIntoView({block: "start", behavior: "smooth"});
+links.forEach((item) => {
+  item.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    menu.classList.remove('show');
+    menu.style.overflowY = 'auto';
+    header.classList.add('scroll');
+    document.body.style.overflow = "";
+
+    const id = event.target.getAttribute('data-target');
+
+    document.getElementById(id).scrollIntoView({block: "start", behavior: "smooth"});
+  });
 });
 
-const newsBtns = document.querySelectorAll('.news__card-btn'),
-      newsBtnsClose = document.querySelectorAll('.article__close'),
-      article = document.querySelector('.article__wrapper');
-
-// newsBtns.forEach((item) => {
-//   item.addEventListener('click', () => {
-//     article.classList.add('article__wrapper_show');
-//   });
-// });
-// newsBtnsClose.forEach((item) => {
-//   item.addEventListener('click', () => {
-//     article.classList.remove('article__wrapper_show');
-//   });
-// }); 

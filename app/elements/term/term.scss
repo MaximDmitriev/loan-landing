@@ -155,6 +155,7 @@
     align-items: center;
     width: 329px;
     height: 234px;
+    margin-top: 33px;
     margin-right: 55px;
     background-image: url('./img/back-term.png');
     background-size: contain;
@@ -163,10 +164,13 @@
     @media (max-width: 479px) {
       margin-right: 0;
     }
+    @media (max-width: 479px) {
+      width: 98%;
+    }
   }
   &__consult-phone {
-    margin-top: 25px;
-    padding-bottom: 17px;
+    margin-top: 19px;
+    padding-bottom: 13px;
     color: $txt-color;
     font-size: 20px;
     font-weight: 700;

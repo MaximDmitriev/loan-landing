@@ -5,6 +5,25 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 $('document').ready(function () {
 
   var calc = document.querySelector('.calc__table');
+  function viewNumbers(number) {
+    var string = number.toString();
+    var arr = string.split('');
+    var sortArr = [];
+    var count = 0;
+    for (var i = arr.length - 1; i > -1; i--) {
+      sortArr.unshift(arr[i]);
+      count++;
+      if (count === 3) {
+        count = 0;
+        sortArr.unshift(' ');
+      }
+    }
+    if (sortArr[0] === '') sortArr.shift();
+
+    var beautyNum = sortArr.join('');
+
+    return beautyNum;
+  }
 
   function buildTable(num, sum) {
     for (var i = 1; i < num + 1; i++) {
@@ -21,14 +40,14 @@ $('document').ready(function () {
 
       if (i != num) {
         cellPos.textContent = i;
-        cellSum.textContent = (parseInt(sum) * 0.38 / 12).toFixed();
+        cellSum.textContent = viewNumbers((parseInt(sum) * 0.38 / 12).toFixed());
         cellLoan.textContent = 0;
-        cellPercent.textContent = (parseInt(sum) * 0.38 / 12).toFixed();
+        cellPercent.textContent = viewNumbers((parseInt(sum) * 0.38 / 12).toFixed());
       } else {
         cellPos.textContent = i;
-        cellSum.textContent = (parseInt(sum) * 0.38 / 12 + parseInt(sum)).toFixed();
-        cellLoan.textContent = sum;
-        cellPercent.textContent = (parseInt(sum) * 0.38 / 12).toFixed();
+        cellSum.textContent = viewNumbers((parseInt(sum) * 0.38 / 12 + parseInt(sum)).toFixed());
+        cellLoan.textContent = viewNumbers(sum);
+        cellPercent.textContent = viewNumbers((parseInt(sum) * 0.38 / 12).toFixed());
       }
       row.appendChild(cellPos);
       row.appendChild(cellSum);
@@ -59,31 +78,21 @@ $('document').ready(function () {
 
     // // Callback function
     onInit: function onInit() {
-      buildTable(4, 30000);
+      buildTable(4, 100000);
+      document.querySelector('#numSum').textContent = viewNumbers(100000);
     },
 
     // Callback function
     onSlide: function onSlide(position, value) {
-      var data = [],
-          dataRow = {
-        pos: null,
-        sum: null,
-        loan: null,
-        percent: null
-      },
-          month = value,
-          total = document.querySelector('#numSum').textContent;
 
       deleteAllRows();
-      var sum = parseInt(document.querySelector('#numSum').textContent);
-      buildTable(value, sum);
+      var sum = document.querySelector('#numSum').textContent;
+      sum = sum.replace(new RegExp(' ', 'g'), '');
+
+      buildTable(value, parseInt(sum));
 
       document.querySelector('#numMonth').textContent = value;
     }
-
-    // // Callback function
-    // onSlideEnd: function(position, value) {
-    // }
   });
 
   $('#sum').rangeslider({
@@ -98,36 +107,31 @@ $('document').ready(function () {
     fillClass: 'rangeslider__fill',
     handleClass: 'rangeslider__handle',
 
-    // // Callback function
-    // onInit: function() {},
-
-    // Callback function
     onSlide: function onSlide(position, value) {
-      document.querySelector('#numSum').textContent = value;
       deleteAllRows();
       var num = parseInt(document.querySelector('#numMonth').textContent);
       buildTable(num, value);
+      document.querySelector('#numSum').textContent = viewNumbers(value);
     }
 
-    // // Callback function
-    // onSlideEnd: function(position, value) {}
   });
 
+  // const container = document.querySelector('#scroll');
+  // Ps.initialize(container, {
+  //   maxScrollbarLength: 50
+  // });
   ymaps.ready(function () {
     var map = new ymaps.Map('map', {
-      center: [54.731597, 20.487724],
+      center: [54.727968, 20.466335],
       zoom: 13,
       controls: ['smallMapDefaultSet']
     });
-    var MyIconContentLayout = ymaps.templateLayoutFactory.createClass('<div class="map-div">\n                <img src="./img/icons/placeholder.png"></img>\n                \u0433. \u041A\u0430\u043B\u0438\u043D\u0438\u043D\u0433\u0440\u0430\u0434, <br>\u0421\u043E\u0432\u0435\u0442\u0441\u043A\u0438\u0439 \u043F\u0440-\u043A\u0442, \u0434.59\n            </div>');
+    var MyIconContentLayout = ymaps.templateLayoutFactory.createClass('<div class="map-div">\n                <img src="./img/icons/placeholder.png"></img>\n                \u0433. \u041A\u0430\u043B\u0438\u043D\u0438\u043D\u0433\u0440\u0430\u0434, <br>\u0443\u043B. \u0411\u0430\u043D\u043A\u043E\u0432\u0441\u043A\u0430\u044F, 12, \u043E\u0444. 5\n            </div>');
 
-    var myPlacemarkWithContent = new ymaps.Placemark([54.731597, 20.487724], {}, {
+    var myPlacemarkWithContent = new ymaps.Placemark([54.727968, 20.466335], {}, {
       iconLayout: 'default#imageWithContent',
       iconImageSize: [0, 0],
-      // Смещение левого верхнего угла иконки относительно
-      // её "ножки" (точки привязки).
       iconImageOffset: [0, 0],
-      // Смещение слоя с содержимым относительно слоя с картинкой.
       iconContentOffset: [-95, -40],
       iconContentLayout: MyIconContentLayout
     });
@@ -136,6 +140,12 @@ $('document').ready(function () {
     map.behaviors.disable('scrollZoom');
   });
 
+  // const header = document.querySelector('header');
+
+  // window.addEventListener('wheel', (e) => {
+  //   pageYOffset != 0 ? header.classList.add('bg-white') : header.classList.remove('bg-white');
+  //   e.deltaY > 0 ? header.classList.add('scroll') : header.classList.remove('scroll');
+  // });
   new Swiper($('#news-slider'), {
     speed: 400,
     spaceBetween: 30,
@@ -189,72 +199,53 @@ $('document').ready(function () {
 
   var menuBtn = document.querySelector('.menu-btn'),
       menuCloseBtn = document.querySelector('.popup-close'),
-      menu = document.querySelector('.popup-menu');
+      menu = document.querySelector('.popup-menu'),
+      header = document.querySelector('header');
 
   menuBtn.addEventListener('click', function () {
     menu.classList.add('show');
+    document.body.style.overflow = "hidden";
+    header.style.height = "100vh";
+    header.style.overflow = "scroll";
   });
 
   menuCloseBtn.addEventListener('click', function () {
+    pageYOffset > 250 ? header.classList.add('scroll') : null;
     menu.classList.remove('show');
+    document.body.style.overflow = "";
+    header.style.height = "initial";
+    header.style.overflow = "initial";
   });
 
-  var linkAdv = document.querySelector('#menuAdv'),
-      linkCalc = document.querySelector('#menuCalc'),
-      linkTerm = document.querySelector('#menuTerm'),
-      linkPrtn = document.querySelector('#menuPrtn'),
-      linkNews = document.querySelector('#menuNews'),
-      linkCont = document.querySelector('#menuCont'),
-      sectionAdv = document.querySelector('#advantages'),
-      sectionCalc = document.querySelector('#calc'),
-      sectionTerm = document.querySelector('#term'),
-      sectionPrtn = document.querySelector('#parners'),
-      sectionNews = document.querySelector('#news'),
-      sectionCont = document.querySelector('#contact');
+  var prevOffset = 0;
+  window.addEventListener('scroll', function () {
+    pageYOffset > 250 ? header.classList.add('bg-white') : header.classList.remove('bg-white');
 
-  linkAdv.addEventListener('click', function (e) {
-    e.preventDefault();
-    menu.classList.remove('show');
-    sectionAdv.scrollIntoView({ block: "start", behavior: "smooth" });
-  });
-  linkCalc.addEventListener('click', function (e) {
-    e.preventDefault();
-    menu.classList.remove('show');
-    sectionCalc.scrollIntoView({ block: "start", behavior: "smooth" });
-  });
-  linkTerm.addEventListener('click', function (e) {
-    e.preventDefault();
-    menu.classList.remove('show');
-    sectionTerm.scrollIntoView({ block: "start", behavior: "smooth" });
-  });
-  linkPrtn.addEventListener('click', function (e) {
-    e.preventDefault();
-    menu.classList.remove('show');
-    sectionPrtn.scrollIntoView({ block: "start", behavior: "smooth" });
-  });
-  linkNews.addEventListener('click', function (e) {
-    e.preventDefault();
-    menu.classList.remove('show');
-    sectionNews.scrollIntoView({ block: "start", behavior: "smooth" });
-  });
-  linkCont.addEventListener('click', function (e) {
-    e.preventDefault();
-    menu.classList.remove('show');
-    sectionCont.scrollIntoView({ block: "start", behavior: "smooth" });
+    header.style.height = "initial";
+    header.style.overflow = "initial";
+    if (pageYOffset > prevOffset) {
+      header.classList.add('scroll');
+      prevOffset = pageYOffset;
+    } else {
+      header.classList.remove('scroll');
+      prevOffset = pageYOffset;
+    }
   });
 
-  var newsBtns = document.querySelectorAll('.news__card-btn'),
-      newsBtnsClose = document.querySelectorAll('.article__close'),
-      article = document.querySelector('.article__wrapper');
+  var links = [document.querySelector('#menuAdv'), document.querySelector('#menuCalc'), document.querySelector('#menuTerm'), document.querySelector('#menuPrtn'), document.querySelector('#menuNews'), document.querySelector('#menuCont')];
 
-  // newsBtns.forEach((item) => {
-  //   item.addEventListener('click', () => {
-  //     article.classList.add('article__wrapper_show');
-  //   });
-  // });
-  // newsBtnsClose.forEach((item) => {
-  //   item.addEventListener('click', () => {
-  //     article.classList.remove('article__wrapper_show');
-  //   });
-  // }); 
+  links.forEach(function (item) {
+    item.addEventListener('click', function (event) {
+      event.preventDefault();
+
+      menu.classList.remove('show');
+      menu.style.overflowY = 'auto';
+      header.classList.add('scroll');
+      document.body.style.overflow = "";
+
+      var id = event.target.getAttribute('data-target');
+
+      document.getElementById(id).scrollIntoView({ block: "start", behavior: "smooth" });
+    });
+  });
 });

@@ -3,7 +3,7 @@ html
     include ../elements/head/head
     +head('loan', 'Page description', 'Page keywords')
     body
-        
+        include ../elements/header/header
         include ../elements/mainscreen/mainscreen
         include ../elements/advantages/advantages
         include ../elements/calculator/calculator
@@ -17,6 +17,7 @@ html
         include ../elements/popups/popup
         include ../elements/popups/article
 
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.4.0/perfect-scrollbar.min.js")
         script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
         script(src="js/libs.min.js")
         //- script(src="rangeslider.min.js")

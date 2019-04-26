@@ -52,13 +52,16 @@ let path = {
             'bower_components/jquery/dist/jquery.min.js',
             'bower_components/rangeslider.js/dist/rangeslider.min.js',
             'bower_components/swiper/dist/js/swiper.min.js',
-            'bower_components/kmodal/dist/js/kmodal.min.js'
+            'bower_components/kmodal/dist/js/kmodal.min.js',
+            'bower_components/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js',
+            'bower_components/perfect-scrollbar/js/perfect-scrollbar.min.js'
         ],
         vendor_css: [
             'bower_components/normalize-css/normalize.css',
             'bower_components/rangeslider.js/dist/rangeslider.css',
             'bower_components/swiper/dist/css/swiper.css',
-            'bower_components/kmodal/dist/css/kmodal.min.css'
+            'bower_components/kmodal/dist/css/kmodal.min.css',
+            'bower_components/perfect-scrollbar/css/perfect-scrollbar.min.css'
         ]
     },
     watch: {

@@ -127,7 +127,17 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    border-bottom: 3px solid #6AA925; 
     background-image: linear-gradient(to top, #6ab717 0%, #a3d252 100%);
+    box-shadow: 1px 6px 13px rgba(125, 200, 30, 0.53);
+    transition: 0.2s;
+    &:hover {
+      box-shadow: 0px 3px 6px rgba(125, 200, 30, 0.9);
+     }
+     &:active {
+       box-shadow: none;
+       border: none;
+     }
   }
 }
 .card-wrap {
