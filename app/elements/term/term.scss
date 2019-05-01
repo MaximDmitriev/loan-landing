@@ -169,7 +169,7 @@
     }
   }
   &__consult-phone {
-    margin-top: 19px;
+    // margin-top: 19px;
     padding-bottom: 13px;
     color: $txt-color;
     font-size: 20px;
@@ -216,5 +216,25 @@
     height: 214px;
     top: -13px;
     background-color: transparent;
+  }
+  &__phone-btn-term {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    background-color: #7ec920;
+    margin-right: 10px;
+    cursor: pointer;
+    img {
+      width: 19px;
+      height: 19px;
+    }
+  }
+  &__btn-wrap {
+    display: flex;
+    align-items: center;
   }
 }

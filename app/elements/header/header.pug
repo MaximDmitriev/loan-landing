@@ -1,0 +1,62 @@
+header.section
+  ._wrap.wrap
+    .header
+      ._header-wrapper
+        ._header-company
+          +svg('logoHands', 'header-logo')
+          +svg('logoText', 'header__header-name')
+          a(href="tel:636112")._phone-btn#btnAnimate
+            img(src="img/call.svg" alt="call")
+        ._header-location
+          ._header-icon
+            +svg('pin')._header-placeholder
+          ._header-addres  г.Калининград, <br> ул. Банковская, 12, оф. 5
+        ._header-contacts
+          ._header-icon
+            +svg('call2')._header-phone
+          ._header-content
+            a(href="tel:636112") 636-112
+            p Получить консультацию
+      button.menu-btn
+        +svg('hamburger', 'header-menu-btn')
+    
+  .popup-menu
+    button.popup-close
+      +svg('close', 'corner')
+    .popup-menu__header
+      +svg('logoHands', 'header-logo')
+      +svg('logoText', 'header__header-name')
+    .popup-menu__item
+      .popup-menu__item-circle
+        +svg('checked')
+      a(href="#" id="menuAdv" data-target="advantages").popup-menu__item-name Почему именно мы
+    .popup-menu__item
+      .popup-menu__item-circle
+        +svg('checked')
+      a(href="#" id="menuCalc" data-target="calc").popup-menu__item-name Калькулятор
+    .popup-menu__item
+      .popup-menu__item-circle
+        +svg('checked')
+      a(href="#" id="menuTerm" data-target="term").popup-menu__item-name Условия
+    .popup-menu__item
+      .popup-menu__item-circle
+        +svg('checked')
+      a(href="#" id="menuPrtn" data-target="parners").popup-menu__item-name Партнёры
+    .popup-menu__item
+      .popup-menu__item-circle
+        +svg('checked')
+      a(href="#" id="menuNews" data-target="news").popup-menu__item-name Новости 
+    .popup-menu__item
+      .popup-menu__item-circle
+        +svg('checked')
+      a(href="#" id="menuCont" data-target="contact").popup-menu__item-name Контакты
+    .popup-menu__adress
+      .popup-menu__icon
+        +svg('pin', 'green')._header-placeholder
+      .popup-menu__street  г.Калининград, ул. Банковская, 12, оф. 5
+    .popup-menu__callback
+      .popup-menu__icon
+        +svg('call2', 'green')._header-phone
+      ._header-content
+        a(href="tel:636112") 636-112
+        p Получить консультацию

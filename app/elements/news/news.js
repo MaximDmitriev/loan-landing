@@ -9,7 +9,6 @@ new Swiper($('#news-slider'), {
     prevEl: '.news-prev',
   },
   breakpoints: {
-    // when window width is <= 320px
     768: {
       slidesPerView: 1,
       spaceBetween: 10,

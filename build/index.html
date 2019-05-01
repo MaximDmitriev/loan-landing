@@ -28,13 +28,17 @@
                                 <use xlink:href="img/elements.svg#logoHands"></use>
                             </svg><svg class="icon-logoText header__header-name">
                                 <use xlink:href="img/elements.svg#logoText"></use>
-                            </svg><a class="header__phone-btn" href="tel:636112"><img src="img/call.svg" alt="call"></a></div>
+                            </svg><a class="header__phone-btn" href="tel:636112" id="btnAnimate"><img src="img/call.svg" alt="call"></a></div>
                         <div class="header__header-location">
-                            <div class="header__header-icon"><i class="icon placeholder "></i></div>
+                            <div class="header__header-icon"><svg class="icon-pin ">
+                                    <use xlink:href="img/elements.svg#pin"></use>
+                                </svg></div>
                             <div class="header__header-addres"> г.Калининград, <br> ул. Банковская, 12, оф. 5</div>
                         </div>
                         <div class="header__header-contacts">
-                            <div class="header__header-icon"><i class="icon phone "></i></div>
+                            <div class="header__header-icon"><svg class="icon-call2 ">
+                                    <use xlink:href="img/elements.svg#call2"></use>
+                                </svg></div>
                             <div class="header__header-content"><a href="tel:636112">636-112</a>
                                 <p>Получить консультацию</p>
                             </div>
@@ -83,11 +87,15 @@
                         </svg></div><a class="popup-menu__item-name" href="#" id="menuCont" data-target="contact">Контакты</a>
                 </div>
                 <div class="popup-menu__adress">
-                    <div class="popup-menu__icon"><i class="icon placeholder "></i></div>
+                    <div class="popup-menu__icon"><svg class="icon-pin green">
+                            <use xlink:href="img/elements.svg#pin"></use>
+                        </svg></div>
                     <div class="popup-menu__street"> г.Калининград, ул. Банковская, 12, оф. 5</div>
                 </div>
                 <div class="popup-menu__callback">
-                    <div class="popup-menu__icon"><i class="icon phone "></i></div>
+                    <div class="popup-menu__icon"><svg class="icon-call2 green">
+                            <use xlink:href="img/elements.svg#call2"></use>
+                        </svg></div>
                     <div class="popup-menu__callback__header-content"><a href="tel:636112">636-112</a>
                         <p>Получить консультацию</p>
                     </div>
@@ -146,17 +154,15 @@
                     <div class="calc__options">
                         <div class="calc__options-item">
                             <div class="calc__options-content">
-                                <div class="calc__options-text">Занять</div>
-                                <div class="calc__options-output" id="numSum">100000</div>
+                                <div class="calc__options-text">Занять</div><input class="calc__options-output" type="text" id="numSum" value="100000">
                                 <div class="calc__options-text">RUB</div>
-                            </div><input type="range" name="sum" data-orientation="horizontal" min="100000" max="10000000" value="30000" step="10000" id="sum">
+                            </div><input type="range" name="sum" data-orientation="horizontal" min="0" max="10000000" value="100000" step="1" id="sum">
                         </div>
                         <div class="calc__options-item">
                             <div class="calc__options-content">
-                                <div class="calc__options-text">На срок</div>
-                                <div class="calc__options-output calc__options-output_small" id="numMonth">4</div>
+                                <div class="calc__options-text">На срок</div><input class="calc__options-output calc__options-output_small" id="numMonth" value="4">
                                 <div class="calc__options-text">месяцев</div>
-                            </div><input class="calc__options-input" type="range" name="sum" data-orientation="horizontal" min="1" max="24" value="4" id="month">
+                            </div><input class="calc__options-input" type="range" name="month" data-orientation="horizontal" min="0" max="24" value="4" id="month">
                         </div>
                     </div>
                 </div>
@@ -179,12 +185,14 @@
                     <div class="calc__politics-note">* График рассчитан исходя из средней ставки и может отличаться от согласованного для вас</div>
                     <div class="calc__form-title">Нравятся условия? <br>Подайте заявку</div>
                     <div class="calc__form-wrap">
-                        <div class="calc__form-input calc__form-input_phone"><input type="text" placeholder="Введите телефон"><svg class="icon-call calc__call-icon">
+                        <div class="calc__form-input calc__form-input_phone"><input type="text" placeholder="Введите телефон" data-name="tel"><svg class="icon-call calc__call-icon">
                                 <use xlink:href="img/elements.svg#call"></use>
-                            </svg></div>
+                            </svg>
+                            <div class="warning">Неверно введен номер</div>
+                        </div>
                         <div class="calc__form-input calc__form-input_name"><input type="text" placeholder="Введите имя"><svg class="icon-man calc__call-icon">
                                 <use xlink:href="img/elements.svg#man"></use>
-                            </svg></div><button class="mainscreen__content-btn mainscreen__content-btn_nomargin">Получить займ</button>
+                            </svg></div><button class="mainscreen__content-btn mainscreen__content-btn_nomargin" data-name="tel">Получить займ</button>
                     </div>
                 </div>
                 <div class="calc__politics">
@@ -289,7 +297,8 @@
                         <div class="term__item-title">Займы предоставляются пайщикам кооператива <br> КПК «РКЦ» </div>
                     </div>
                     <div class="term__consult">
-                        <div class="term__consult-back"> </div><a class="term__consult-phone" href="tel:636112">636-112</a>
+                        <div class="term__consult-back"></div>
+                        <div class="term__btn-wrap"><a class="term__phone-btn-term" href="tel:636112"><img src="img/call.svg" alt="call"></a><a class="term__consult-phone" href="tel:636112">636-112</a></div>
                         <div class="term__consult-note">Бесплатная консультация</div><button class="term__consult-btn" data-modal="#callback">Получить консультацию</button>
                     </div>
                 </div>
@@ -303,12 +312,14 @@
                 <div class="callback__form">
                     <div class="callback__form-title">Заказать обратный звонок</div>
                     <div class="callback__form-note">Мы перезвоним вам в течение 5 минут</div>
-                    <div class="calc__form-input calc__form-input_callback"><input type="text" placeholder="Введите телефон"><svg class="icon-call calc__call-icon">
+                    <div class="calc__form-input calc__form-input_callback"><input type="text" placeholder="Введите телефон" data-name="tel"><svg class="icon-call calc__call-icon">
                             <use xlink:href="img/elements.svg#call"></use>
-                        </svg></div>
+                        </svg>
+                        <div class="warning">Неверно введен номер</div>
+                    </div>
                     <div class="calc__form-input calc__form-input_callback"><input type="text" placeholder="Введите имя"><svg class="icon-man calc__call-icon">
                             <use xlink:href="img/elements.svg#man"></use>
-                        </svg></div><button class="callback__form-btn">Заказать звонок</button>
+                        </svg></div><button class="callback__form-btn" data-name="tel">Заказать звонок</button>
                     <div class="calc__politics calc__politics_callback">
                         <div class="calc__politics-wrapper"><label for="checkCall"><input class="calc__check" type="checkbox" checked id="checkCall">
                                 <div class="calc__politics-checkbox"></div>
@@ -329,7 +340,7 @@
                             <div class="swiper-slide partners__item"><img src="img/rlk.png" alt="partner"></div>
                             <div class="swiper-slide partners__item"><img src="img/energo.png" alt="partner"></div>
                             <div class="swiper-slide partners__item"><img src="img/rks.png" alt="partner"></div>
-                            <div class="swiper-slide partners__item"><img src="img/rks-lombard.webp" alt="partner"></div>
+                            <div class="swiper-slide partners__item"><img src="img/rks-lombard.png" alt="partner"></div>
                         </div>
                     </div>
                 </div>
@@ -442,11 +453,15 @@
                         </svg></div>
                     <div class="contacts__footer-copyrights">Все права защищены (с) 2019</div>
                     <div class="contacts__footer-location">
-                        <div class="contacts__footer-icon"><i class="icon placeholder "></i></div>
+                        <div class="contacts__footer-icon"><svg class="icon-pin ">
+                                <use xlink:href="img/elements.svg#pin"></use>
+                            </svg></div>
                         <div class="contacts__footer-addres"> г.Калининград, <br> ул. Банковская, 12, оф. 5</div>
                     </div>
                     <div class="contacts__footer-contacts">
-                        <div class="contacts__footer-icon"><i class="icon phone "></i></div>
+                        <div class="contacts__footer-icon"><svg class="icon-call2 ">
+                                <use xlink:href="img/elements.svg#call2"></use>
+                            </svg></div>
                         <div class="contacts__footer-content"><a href="tel:636112">636-112</a></div>
                     </div>
                 </footer>
@@ -458,12 +473,16 @@
                 <div class="info__content">Предложения на данном сайте доступны только для пайщиков КПК «РКЦ» на основе солидарного несения пайщиками субсидиарной ответственности по обязательствам в пределах не внесенной части дополнительного взноса каждого из пайщиков. Для вступления в кооператив необходимо уплатить вступительный и паевой взносы в общем размере: <br>- для физических лиц – 300 руб. <br> - для юридических лиц – 3000 руб.</div>
             </div>
         </div>
-        <div class="total-overlay">
-            <div class="thanks"><svg class="icon-close corner">
-                    <use xlink:href="img/elements.svg#close"></use>
-                </svg>
-                <div class="thanks__title">Спасибо за заявку!</div>
-                <div class="thanks__txt">Мы перезвоним вам в течение 5 минут</div><i class="icon checked "></i>
+        <div class="modal" id="thanks">
+            <div class="modal__dialog">
+                <div class="modal__content">
+                    <div class="thanks"><button data-role="modal-close"><svg class="icon-close corner">
+                                <use xlink:href="img/elements.svg#close"></use>
+                            </svg></button>
+                        <div class="thanks__title">Спасибо за заявку!</div>
+                        <div class="thanks__txt">Мы перезвоним вам в течение 5 минут</div><i class="icon checked "></i>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="modal" id="callback">
@@ -474,12 +493,14 @@
                             </svg></button>
                         <div class="callback__form-title">Заказать обратный звонок</div>
                         <div class="callback__form-note">Мы перезвоним вам в течение 5 минут</div>
-                        <div class="calc__form-input calc__form-input_callback"><input type="text" placeholder="Введите телефон"><svg class="icon-call calc__call-icon">
+                        <div class="calc__form-input calc__form-input_callback"><input type="text" placeholder="Введите телефон" data-name="tel"><svg class="icon-call calc__call-icon">
                                 <use xlink:href="img/elements.svg#call"></use>
-                            </svg></div>
+                            </svg>
+                            <div class="warning">Неверно введен номер</div>
+                        </div>
                         <div class="calc__form-input calc__form-input_callback"><input type="text" placeholder="Введите имя"><svg class="icon-man calc__call-icon">
                                 <use xlink:href="img/elements.svg#man"></use>
-                            </svg></div><button class="callback__form-btn">Заказать звонок</button>
+                            </svg></div><button class="callback__form-btn" data-name="tel">Заказать звонок</button>
                         <div class="calc__politics calc__politics_callback">
                             <div class="calc__politics-wrapper"><label for="checkModal"><input class="calc__check" type="checkbox" checked id="checkModal">
                                     <div class="calc__politics-checkbox"></div>
@@ -513,7 +534,6 @@
                 </div>
             </div>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.4.0/perfect-scrollbar.min.js"></script>
         <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
         <script src="js/libs.min.js"></script>
         <script src="js/custom.js"></script>

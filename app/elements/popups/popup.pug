@@ -7,12 +7,13 @@
         .callback__form-title Заказать обратный звонок
         .callback__form-note Мы перезвоним вам в течение 5 минут
         .calc__form-input.-callback
-          input(type="text" placeholder="Введите телефон")
+          input(type="text" placeholder="Введите телефон" data-name="tel")
           +svg('call', 'calc__call-icon')
+          .warning Неверно введен номер
         .calc__form-input.-callback
           input(type="text" placeholder="Введите имя")
           +svg('man', 'calc__call-icon')
-        button.callback__form-btn Заказать звонок
+        button.callback__form-btn(data-name="tel") Заказать звонок
         .calc__politics.-callback
           .calc__politics-wrapper
             label(for="checkModal")

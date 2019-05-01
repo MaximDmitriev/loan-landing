@@ -8,15 +8,15 @@
         ._options-item
           ._options-content
             ._options-text Занять
-            ._options-output(id="numSum") 100000
+            input._options-output(type="text" id="numSum" value="100000")
             ._options-text RUB
-          input(type="range", name="sum" data-orientation="horizontal" min="100000" max="10000000" value="30000" step="10000")#sum
+          input(type="range", name="sum" data-orientation="horizontal" min="0" max="10000000" value="100000" step="1")#sum
         ._options-item
           ._options-content
             ._options-text На срок
-            ._options-output.-small(id="numMonth") 4
+            input._options-output.-small(id="numMonth" value="4")
             ._options-text месяцев
-          input(type="range", name="sum" data-orientation="horizontal" min="1" max="24" value="4")#month._options-input
+          input(type="range", name="month" data-orientation="horizontal" min="0" max="24" value="4")#month._options-input
     ._table-wrapper#scroll
       ._table
         ._table-title График платежей 
@@ -33,12 +33,13 @@
       ._form-title Нравятся условия? <br>Подайте заявку
       ._form-wrap
         ._form-input.-phone
-          input(type="text" placeholder="Введите телефон")
+          input(type="text" placeholder="Введите телефон" data-name="tel")
           +svg('call', 'calc__call-icon')
+          .warning Неверно введен номер
         ._form-input.-name
           input(type="text" placeholder="Введите имя")
           +svg('man', 'calc__call-icon')
-        button.mainscreen__content-btn.-nomargin Получить займ
+        button.mainscreen__content-btn.-nomargin(data-name="tel") Получить займ
     ._politics
       ._politics-wrapper
         label(for="check")

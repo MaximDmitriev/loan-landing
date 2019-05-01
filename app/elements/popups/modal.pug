@@ -1,7 +1,10 @@
-.total-overlay
-  .thanks
-    +svg('close', 'corner')
-    .thanks__title Спасибо за заявку!
-    .thanks__txt Мы перезвоним вам в течение 5 минут
-    +icon('checked')
+.modal(id="thanks")
+  .modal__dialog
+    .modal__content
+      .thanks
+        button(data-role="modal-close")
+          +svg('close', 'corner')
+        .thanks__title Спасибо за заявку!
+        .thanks__txt Мы перезвоним вам в течение 5 минут
+        +icon('checked')
 

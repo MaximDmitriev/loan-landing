@@ -1,5 +1,4 @@
 .contacts {
-  // display: none;
   padding-top: 90px;
   padding-bottom: 40px;
   background-color: $dark-bg;
@@ -97,7 +96,6 @@
       font-size: 10px;
       line-height: 17px;
       padding-left: 5px;
-      // margin-left: 0;
       max-width: 40%;
       order: -1;
     }
@@ -118,9 +116,14 @@
   &__footer-contacts {
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 234px;
     @media (max-width: 479px) {
       order: -1;
       margin-top: 15px;
+    }
+    @media (max-width: 1099px) {
+      justify-content: flex-start;
     }
   }
   &__footer-location {
@@ -151,9 +154,6 @@
       padding-bottom: 5px;
       letter-spacing: 0.36px;
     }
-    // p {
-    //   border-bottom: 1px dashed $main-theme;
-    // }
   }
 
 

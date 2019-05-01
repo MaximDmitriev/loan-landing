@@ -12,9 +12,14 @@
     fill: #7ec920;
   }
   &-call {
-    width: 20px;
+    width: 16px;
     height: 20px;
     fill: #e8ebef;
+  }
+  &-call2 {
+    width: 20px;
+    height: 20px;
+    fill: #7ec920;
   }
   &-man {
     width: 16px;
@@ -50,6 +55,16 @@
     width: 140px;
     height: 59px;
     fill: #000000;
+  }
+  &-placeholder {
+    width: 28px;
+    height: 30px;
+    fill: #7ec920;
+  }
+  &-pin {
+    width: 24px;
+    height: 26px;
+    fill: #7ec920;
   }
   &.mouse {
     background: url('img/icons/mouse.png');
